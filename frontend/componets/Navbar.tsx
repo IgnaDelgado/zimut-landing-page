@@ -1,0 +1,48 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export function Navbar() {
+  return (
+    <motion.nav
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="sticky top-0 z-40 border-b border-white/5 bg-bgDark/80 backdrop-blur-xl"
+    >
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="flex items-center gap-2">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-mint to-cyanSoft">
+            <span className="text-lg font-semibold tracking-tight">Z</span>
+          </div>
+          <div>
+            <p className="text-lg font-semibold tracking-wide">ZIMUT</p>
+            <p className="text-xs text-white/50">Tecnología que te guía</p>
+          </div>
+        </div>
+
+        <div className="hidden gap-6 text-sm text-white/70 md:flex">
+          <a href="#servicios" className="hover:text-white">
+            Servicios
+          </a>
+          <a href="#como" className="hover:text-white">
+            Cómo trabajamos
+          </a>
+          <a href="#por-que" className="hover:text-white">
+            Propósito
+          </a>
+          <a href="#contacto" className="hover:text-white">
+            Contacto
+          </a>
+        </div>
+
+        <a
+          href="#contacto"
+          className="rounded-full bg-white px-4 py-1.5 text-xs font-medium text-bgDark hover:bg-mint hover:text-bgDark transition-colors"
+        >
+          Hablemos de tu proyecto
+        </a>
+      </div>
+    </motion.nav>
+  );
+}
