@@ -32,6 +32,7 @@ const services = [
     title: "Care & continuous support",
     desc: "Stay confident post-launch with proactive monitoring, optimisation, and a team that evolves alongside your goals.",
     tags: ["SLA-backed", "Enablement", "Ongoing improvement"]
+
   }
 ];
 
@@ -51,6 +52,7 @@ export function Services() {
             ZIMUT builds robust, scalable solutions with AI as a strategic ally. Every engagement starts with understanding your context and ends with a product that feels tailored, calm, and future-ready.
           </p>
         </motion.div>
+
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((s, i) => (

@@ -24,6 +24,7 @@ export function Why() {
             </p>
             <p className="mt-3 text-sm md:text-base text-white/70">
               ZIMUT exists to translate complexity into confidence. We listen, ask the right questions, and design software that respects your people while unlocking meaningful growth.
+
             </p>
           </motion.div>
 
@@ -43,6 +44,7 @@ export function Why() {
               <li>• Effective simplicity that keeps users confident and loyal.</li>
               <li>• Transparency in scope, timing, and investment from day one.</li>
               <li>• Shared metrics so we grow sustainably—together.</li>
+
             </ul>
           </motion.div>
         </div>

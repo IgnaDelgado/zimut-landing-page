@@ -23,6 +23,7 @@ export function Navbar() {
           <div>
             <p className="text-lg font-semibold tracking-wide">ZIMUT</p>
             <p className="text-xs text-white/50">Guiding software clarity with AI care</p>
+
           </div>
         </div>
 
@@ -37,7 +38,7 @@ export function Navbar() {
             Benefits
           </a>
           <a href="#why" className="hover:text-white">
-            Why ZIMUT
+            Why Guidelight
           </a>
           <a href="#contact" className="hover:text-white">
             Contact

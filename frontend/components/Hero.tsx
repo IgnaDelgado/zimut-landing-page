@@ -28,6 +28,7 @@ export function Hero() {
             <div className="h-full w-full bg-[linear-gradient(115deg,rgba(139,228,200,0.15)_0%,rgba(82,214,255,0.05)_55%,transparent_100%)] opacity-70" />
           </div>
         </motion.div>
+
       </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-stretch gap-16 px-5 pb-28 pt-24 md:flex-row md:items-center">
@@ -48,12 +49,14 @@ export function Hero() {
 
           <p className="mt-5 text-sm text-white/70 md:text-base">
             We bring software clarity to leaders overwhelmed by buzzwords and fast-moving AI trends. ZIMUT translates technical complexity into guided, human-centered products that feel calm, precise, and ready to scale.
+
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
               className="rounded-full bg-mint px-6 py-2 text-sm font-semibold text-bgDark shadow-lg shadow-mint/40 transition-colors hover:bg-sky"
+
             >
               Let’s discuss your project
             </a>
@@ -75,6 +78,7 @@ export function Hero() {
               <p className="font-semibold text-white">Care that endures</p>
               <p className="mt-1 text-white/60">Continuous partnership to evolve products and keep teams confident.</p>
             </div>
+
           </div>
         </motion.div>
 
@@ -108,7 +112,7 @@ export function Hero() {
                   <p>Automations and AI copilots introduced with governance and care.</p>
                 </div>
               </div>
-            </div>
+
             <motion.div
               className="absolute -top-6 right-10 h-16 w-16 rounded-2xl bg-gradient-to-br from-mint/60 to-sky/40 blur-lg"
               animate={{ y: [0, -10, 0] }}
@@ -119,6 +123,13 @@ export function Hero() {
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 8, repeat: Infinity }}
             />
+            <motion.div
+              className="absolute inset-3 flex items-center justify-end"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+            >
+              <div className="h-3 w-3 rounded-full bg-sky shadow-md shadow-sky/50" />
+            </motion.div>
           </div>
         </motion.div>
       </div>

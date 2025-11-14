@@ -18,6 +18,7 @@ const steps = [
   {
     title: "4. Support & evolve",
     desc: "Post-launch, we train teams, monitor outcomes, and iterate so your product stays aligned with your growth."
+
   }
 ];
 
@@ -35,6 +36,7 @@ export function How() {
           <h2 className="section-title">A process that looks after your business.</h2>
           <p className="section-subtitle">
             Transparent rituals, proactive updates, and shared tools keep you grounded. We move with you, not ahead of you, so every decision supports the original vision.
+
           </p>
         </motion.div>
 
