@@ -47,8 +47,8 @@ export function Contact() {
       id="contact"
       className="border-t border-white/5 bg-gradient-to-b from-black via-[#0F0F12] to-bgDark"
     >
-      <div className="mx-auto max-w-7xl section-padding">
-        <div className="grid items-start gap-10 md:grid-cols-[1.05fr_1fr]">
+      <div className="section-wrapper section-padding">
+        <div className="grid items-start gap-12 md:grid-cols-[1.05fr_1fr]">
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -63,7 +63,7 @@ export function Contact() {
               you seek. We will respond with a thoughtful roadmap and a caring
               team ready to walk beside you.
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-white/60">
+            <ul className="mt-5 space-y-3 text-sm text-white/60">
               <li>• Founder-led teams seeking momentum with limited capacity.</li>
               <li>• Established organisations modernising mission-critical tools.</li>
               <li>• Leaders exploring AI adoption with responsibility and care.</li>
@@ -75,8 +75,8 @@ export function Contact() {
             initial={{ x: 20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="card-glass space-y-4 border-white/10 bg-white/5 p-6 text-sm"
+            transition={{ duration: 0.55 }}
+            className="card-glass space-y-5 border-white/10 bg-white/5 p-7 text-sm shadow-[0_25px_60px_-40px_rgba(139,228,200,0.8)]"
           >
             <div>
               <label className="mb-1 block text-xs text-white/60">
@@ -85,7 +85,7 @@ export function Contact() {
               <input
                 required
                 name="name"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-3 py-3 text-sm outline-none transition-all focus:border-mint focus:ring-2 focus:ring-mint/40"
               />
             </div>
             <div>
@@ -96,7 +96,7 @@ export function Contact() {
                 required
                 type="email"
                 name="email"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-3 py-3 text-sm outline-none transition-all focus:border-mint focus:ring-2 focus:ring-mint/40"
               />
             </div>
             <div>
@@ -105,7 +105,7 @@ export function Contact() {
               </label>
               <input
                 name="company"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full rounded-2xl border border-white/10 bg-black/40 px-3 py-3 text-sm outline-none transition-all focus:border-mint focus:ring-2 focus:ring-mint/40"
               />
             </div>
             <div>
@@ -116,7 +116,7 @@ export function Contact() {
                 required
                 name="message"
                 rows={4}
-                className="w-full resize-none rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full resize-none rounded-2xl border border-white/10 bg-black/40 px-3 py-3 text-sm outline-none transition-all focus:border-mint focus:ring-2 focus:ring-mint/40"
               />
             </div>
 
@@ -129,14 +129,15 @@ export function Contact() {
               <p className="text-xs text-red-400">{error}</p>
             )}
 
-            <button
+            <motion.button
               type="submit"
               disabled={status === "loading"}
-              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark transition-colors hover:bg-sky disabled:opacity-60"
-
+              whileTap={{ scale: 0.96 }}
+              whileHover={{ scale: 1.02 }}
+              className="flex w-full items-center justify-center rounded-full bg-mint px-5 py-3 text-sm font-semibold tracking-[0.16em] text-bgDark transition-all hover:bg-sky disabled:opacity-60"
             >
               {status === "loading" ? "Sending..." : "Let’s begin"}
-            </button>
+            </motion.button>
           </motion.form>
         </div>
       </div>

@@ -38,13 +38,13 @@ const benefits = [
 export function Benefits() {
   return (
     <section id="benefits" className="border-t border-white/5 bg-gradient-to-b from-black via-[#0B0B0D] to-bgDark">
-      <div className="mx-auto max-w-7xl section-padding">
+      <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="mb-10 max-w-2xl"
+          className="mb-12 max-w-3xl"
         >
           <h2 className="section-title">Benefits you feel at every step.</h2>
           <p className="section-subtitle">
@@ -59,15 +59,16 @@ export function Benefits() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.35, delay: index * 0.08 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ y: -6 }}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_50px_-35px_rgba(82,214,255,0.6)]"
             >
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 1.2, delay: index * 0.08 }}
-                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mint/0 via-transparent to-sky/0 group-hover:from-mint/10 group-hover:to-sky/10"
+                transition={{ duration: 1.2, delay: index * 0.1 }}
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mint/0 via-transparent to-sky/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-mint/15 group-hover:to-sky/15"
               />
               <div className="relative">
                 <p className="text-sm font-semibold text-white">{benefit.title}</p>

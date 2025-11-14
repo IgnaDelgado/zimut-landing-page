@@ -24,13 +24,13 @@ const steps = [
 export function How() {
   return (
     <section id="how" className="border-t border-white/5 bg-bgDark">
-      <div className="mx-auto max-w-7xl section-padding">
+      <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="mb-10 max-w-2xl"
+          className="mb-12 max-w-3xl"
         >
           <h2 className="section-title">A process that looks after your business.</h2>
           <p className="section-subtitle">
@@ -45,9 +45,11 @@ export function How() {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.35, delay: i * 0.1 }}
-              className="card-glass border-white/10 bg-white/5 p-5 text-sm"
+              transition={{ duration: 0.4, delay: i * 0.12 }}
+              whileHover={{ y: -6 }}
+              className="card-glass group relative overflow-hidden p-6 text-sm"
             >
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mint/0 via-white/5 to-sky/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint/80">
                 {step.title}
               </p>
@@ -60,8 +62,8 @@ export function How() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 rounded-2xl border border-mint/20 bg-mint/10 p-6 text-sm text-mint"
+          transition={{ duration: 0.55, delay: 0.4 }}
+          className="mt-14 rounded-3xl border border-mint/30 bg-gradient-to-br from-mint/10 via-transparent to-sky/5 p-7 text-base text-mint shadow-[0_20px_50px_-30px_rgba(139,228,200,0.8)]"
         >
           We always evaluate whether AI adds strategic value. If it helps, we integrate it with intention. If it doesn’t, we keep the solution simple and effective.
         </motion.div>
