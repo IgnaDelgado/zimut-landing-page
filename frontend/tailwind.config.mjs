@@ -7,9 +7,10 @@ const config = {
   theme: {
     extend: {
       colors: {
-        bgDark: "#0B0B0D",
-        mint: "#8BE4C8",
-        cyanSoft: "#52D6FF",
+        bgDark: "#08080A",
+        mint: "#A9F0DD",
+        sky: "#8ACBFF",
+        sand: "#F5EDE6",
         smoke: "#EFEFEF"
       },
       fontFamily: {

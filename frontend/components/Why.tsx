@@ -17,17 +17,18 @@ export function Why() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-title">
-              Our why: clarity in a noisy tech world.
+              Our why: bring calm, clarity and growth to digital change.
             </h2>
             <p className="mt-4 text-sm md:text-base text-white/65">
-              The software world is full of buzzwords, overpromises and
-              one-size-fits-all solutions. Companies know they need technology
-              and AI, but they rarely get a clear, grounded path to use them.
+              Technology decisions often feel overwhelming, especially with the
+              pace of AI. Leaders know they must evolve, yet the path is foggy,
+              crowded with jargon and short-term promises.
             </p>
             <p className="mt-3 text-sm md:text-base text-white/65">
-              ZIMUT exists to close that gap. We translate technical complexity
-              into a language that makes sense for your business, and we build
-              solutions together with you, not on top of you.
+              Guidelight Labs exists to stand beside you as a trusted steward.
+              We translate complexity into plain language, co-design solutions
+              with your teams and deliver software that feels familiar, caring
+              and future-ready.
             </p>
           </motion.div>
 
@@ -42,11 +43,11 @@ export function Why() {
               What we stand for
             </p>
             <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li>• Robust solutions, not fragile prototypes.</li>
-              <li>• AI applied where it adds value, not just hype.</li>
-              <li>• Effective simplicity in every decision and interface.</li>
-              <li>• Close collaboration instead of black-box delivery.</li>
-              <li>• Long-term growth for your business as our north.</li>
+              <li>• Practical innovation anchored in business reality.</li>
+              <li>• Responsible AI adoption with governance and empathy.</li>
+              <li>• Effective simplicity that keeps users confident.</li>
+              <li>• Radical transparency across every phase of delivery.</li>
+              <li>• Shared success metrics oriented toward long-term growth.</li>
             </ul>
           </motion.div>
         </div>

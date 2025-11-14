@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web & mobile development",
-    desc: "Modern, fast and secure applications built around your business, not the other way around.",
-    tags: ["Next.js", "React Native", "Scalable architectures"]
+    title: "Product & platform stewardship",
+    desc: "Tailored web, mobile and desktop solutions that respect your operations while elevating performance and reliability.",
+    tags: ["Full-stack squads", "Secure architectures", "SLA-backed care"]
   },
   {
-    title: "Applied AI for real use cases",
-    desc: "From AI agents and chatbots to intelligent process automation that actually moves the needle.",
-    tags: ["AI-first", "Automation", "Agents & assistants"]
+    title: "AI enablement & automation",
+    desc: "From copilots and knowledge assistants to workflow intelligence that removes repetitive tasks without sacrificing control.",
+    tags: ["Responsible AI", "Process automation", "Custom agents"]
   },
   {
-    title: "Modernisation & digital transformation",
-    desc: "We take your existing systems into a new stage: clearer, integrated and maintainable.",
-    tags: ["Integrations", "Migrations", "System redesign"]
+    title: "Experience modernisation",
+    desc: "Rebuild legacy systems into intuitive, future-proof experiences with clear data flows, governance and documentation.",
+    tags: ["System redesign", "Integrations", "Cloud migrations"]
   },
   {
-    title: "Process automation",
-    desc: "We reduce repetitive work so that your team can focus on what truly matters.",
-    tags: ["Workflows", "Lightweight automation", "Connectors"]
+    title: "Growth enablement programs",
+    desc: "Long-term partnerships with ongoing optimisation, analytics and training so teams adopt technology with confidence.",
+    tags: ["Analytics", "Enablement", "Continuous improvement"]
   }
 ];
 
@@ -31,11 +31,11 @@ export function Services() {
       <div className="mx-auto max-w-6xl section-padding">
         <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="section-title">What we build for you.</h2>
+            <h2 className="section-title">What we nurture for your organisation.</h2>
             <p className="section-subtitle">
-              We design and develop tailored software, using AI as a strategic
-              ally, not as decoration. Everything starts from your real problem,
-              not from our favorite stack.
+              Every engagement begins with understanding. We translate insight
+              into resilient platforms, pairing AI with thoughtful design so
+              your teams can focus on the work that matters most.
             </p>
           </div>
         </div>

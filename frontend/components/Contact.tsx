@@ -56,17 +56,17 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="section-title">
-              Ready to give your project a clear direction?
+              Let’s co-create the next chapter of your product story.
             </h2>
             <p className="section-subtitle">
-              Tell us where your business is today and what you would like to
-              improve. We will get back to you with a grounded, honest proposal,
-              not a generic pitch deck.
+              Share where you are today, the friction you feel and the outcomes
+              you seek. We will respond with a thoughtful roadmap and a caring
+              team ready to walk beside you.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-white/60">
-              <li>• Small businesses taking their first digital step.</li>
-              <li>• Teams that want to automate without losing control.</li>
-              <li>• Companies exploring AI in a pragmatic way.</li>
+              <li>• Founder-led teams seeking momentum with limited capacity.</li>
+              <li>• Established organisations modernising mission-critical tools.</li>
+              <li>• Leaders exploring AI adoption with responsibility and care.</li>
             </ul>
           </motion.div>
 
@@ -122,7 +122,7 @@ export function Contact() {
 
             {status === "ok" && (
               <p className="text-xs text-mint">
-                ✅ Thanks for reaching out. We will get back to you soon.
+                ✅ Thanks for reaching out. We will be in touch shortly.
               </p>
             )}
             {status === "error" && (
@@ -132,7 +132,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark hover:bg-cyanSoft transition-colors disabled:opacity-60"
+              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark hover:bg-sky transition-colors disabled:opacity-60"
             >
               {status === "loading" ? "Sending..." : "Send message"}
             </button>

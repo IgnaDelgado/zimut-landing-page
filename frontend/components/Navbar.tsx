@@ -12,12 +12,12 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-mint to-cyanSoft">
-            <span className="text-lg font-semibold tracking-tight">Z</span>
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-mint to-sky">
+            <span className="text-lg font-semibold tracking-tight text-bgDark">G</span>
           </div>
           <div>
-            <p className="text-lg font-semibold tracking-wide">ZIMUT</p>
-            <p className="text-xs text-white/50">Technology that guides you</p>
+            <p className="text-lg font-semibold tracking-wide">Guidelight Labs</p>
+            <p className="text-xs text-white/50">Steadfast software, human-first guidance</p>
           </div>
         </div>
 
@@ -29,7 +29,7 @@ export function Navbar() {
             How we work
           </a>
           <a href="#why" className="hover:text-white">
-            Why ZIMUT
+            Why Guidelight
           </a>
           <a href="#contact" className="hover:text-white">
             Contact

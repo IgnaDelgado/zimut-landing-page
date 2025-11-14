@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    title: "1. Understand",
-    desc: "We analyse your business, systems and constraints to understand the real problem to solve."
+    title: "1. Discover",
+    desc: "Immersive workshops to learn your business model, systems, users and the root causes behind each challenge."
   },
   {
-    title: "2. Design",
-    desc: "We propose a clear, scalable solution aligned with your goals and context, not just with trends."
+    title: "2. Co-design",
+    desc: "We map scenarios together, define success metrics and outline an architecture that balances ambition with stability."
   },
   {
-    title: "3. Build",
-    desc: "We implement with high standards in security, robustness and maintainability."
+    title: "3. Build & validate",
+    desc: "Multidisciplinary squads deliver increments with governance, security and rigorous testing baked in."
   },
   {
-    title: "4. Support",
-    desc: "We guide adoption, iterate with feedback and evolve the solution as your needs change."
+    title: "4. Support & evolve",
+    desc: "Training, analytics and iteration loops ensure adoption, measure value and adapt the solution as your goals mature."
   }
 ];
 
@@ -26,11 +26,11 @@ export function How() {
     <section id="how" className="border-t border-white/5 bg-bgDark">
       <div className="mx-auto max-w-6xl section-padding">
         <div className="mb-8 max-w-xl">
-          <h2 className="section-title">How we work, step by step.</h2>
+          <h2 className="section-title">How we care for your initiatives.</h2>
           <p className="section-subtitle">
-            No black boxes, no guesswork. You see the full path from idea to
-            launch, and we keep you aligned with the original vision unless you
-            decide to pivot.
+            Transparent rituals, proactive updates and shared tools keep you in
+            control. We stay aligned with the original purpose while remaining
+            agile to informed change.
           </p>
         </div>
 
