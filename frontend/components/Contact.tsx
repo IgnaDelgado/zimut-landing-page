@@ -45,10 +45,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-white/5 bg-gradient-to-b from-black to-bgDark"
+      className="border-t border-white/5 bg-gradient-to-b from-black via-[#0F0F12] to-bgDark"
     >
-      <div className="mx-auto max-w-6xl section-padding">
-        <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] items-start">
+      <div className="mx-auto max-w-7xl section-padding">
+        <div className="grid items-start gap-10 md:grid-cols-[1.05fr_1fr]">
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -76,7 +76,7 @@ export function Contact() {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="card-glass space-y-4 p-5 text-sm"
+            className="card-glass space-y-4 border-white/10 bg-white/5 p-6 text-sm"
           >
             <div>
               <label className="mb-1 block text-xs text-white/60">
@@ -132,9 +132,10 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark hover:bg-sky transition-colors disabled:opacity-60"
+              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark transition-colors hover:bg-sky disabled:opacity-60"
+
             >
-              {status === "loading" ? "Sending..." : "Send message"}
+              {status === "loading" ? "Sending..." : "Let’s begin"}
             </button>
           </motion.form>
         </div>
