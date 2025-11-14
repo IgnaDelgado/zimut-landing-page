@@ -5,6 +5,7 @@ import { Why } from "@/components/Why";
 import { How } from "@/components/How";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Benefits } from "@/components/Benefits";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         <Services />
         <Why />
         <How />
+        <Benefits />
         <Contact />
       </main>
       <Footer />

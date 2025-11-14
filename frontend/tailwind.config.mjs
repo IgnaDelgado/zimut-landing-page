@@ -9,7 +9,8 @@ const config = {
       colors: {
         bgDark: "#0B0B0D",
         mint: "#8BE4C8",
-        cyanSoft: "#52D6FF",
+        sky: "#52D6FF",
+        sand: "#F5F5F5",
         smoke: "#EFEFEF"
       },
       fontFamily: {
