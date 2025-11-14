@@ -2,40 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const highlights = [
-  {
-    title: "Clarity first",
-    description:
-      "Discovery rituals and documentation that translate ideas into confident direction."
-  },
-  {
-    title: "AI with purpose",
-    description:
-      "Intelligence evaluated as strategy, ensuring every automation earns its place."
-  },
-  {
-    title: "Care that endures",
-    description:
-      "Steady partnership and enablement long after launch day."
-  }
-];
-
-const timeline = [
-  {
-    label: "Orientation",
-    copy: "Joint workshops surface objectives, constraints, and user truths."
-  },
-  {
-    label: "Navigation",
-    copy: "We chart a roadmap, align teams, and select the technologies that fit."
-  },
-  {
-    label: "Momentum",
-    copy: "Incremental releases pair robust engineering with measurable outcomes."
-  }
-];
+import { useLanguage } from "@/components/LanguageProvider";
 
 export function Hero() {
+  const { hero } = useLanguage().content;
+
   return (
     <section className="relative overflow-hidden border-b border-white/5 bg-gradient-to-b from-[#08080A] via-bgDark to-black">
       <div className="pointer-events-none absolute inset-0">
@@ -87,15 +58,27 @@ export function Hero() {
         </motion.svg>
         <motion.div
           initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 0.4, x: 0 }}
+          animate={{ opacity: 0.35, x: 0 }}
           transition={{ duration: 1.4, delay: 0.6 }}
           className="absolute right-[-12%] top-[25%] h-[24rem] w-[46rem] -skew-y-12 rounded-[60px] bg-gradient-to-br from-mint/15 via-white/10 to-sky/15 blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 0.6, scale: 1 }}
+          animate={{ opacity: 0.5, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.4 }}
           className="absolute left-[-14%] top-[30%] h-[22rem] w-[22rem] rounded-full bg-gradient-to-br from-mint/20 via-transparent to-sky/10 blur-3xl"
+        />
+        <motion.div
+          initial={{ opacity: 0, rotate: 6 }}
+          animate={{ opacity: 0.35, rotate: 0 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
+          className="absolute bottom-[-8rem] left-1/2 h-[18rem] w-[54rem] -translate-x-1/2 rounded-[120px] border border-mint/15 bg-gradient-to-r from-mint/10 via-transparent to-sky/10 blur-2xl"
+        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.35 }}
+          transition={{ duration: 1.4, delay: 1 }}
+          className="absolute left-[15%] top-[10%] h-36 w-36 rounded-full border border-white/10 bg-gradient-to-b from-mint/20 to-transparent blur-xl"
         />
       </div>
 
@@ -108,15 +91,15 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.24em] text-white/60">
             <span className="h-1.5 w-1.5 rounded-full bg-mint" />
-            ZIMUT • SOFTWARE GUIDANCE
+            {hero.badge}
           </span>
 
           <h1 className="mt-8 text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            Technology solutions that guide you toward your best version.
+            {hero.title}
           </h1>
 
           <p className="mt-7 max-w-2xl text-base text-white/70 md:text-lg">
-            We bring software clarity to organisations overwhelmed by buzzwords and rapid AI trends. ZIMUT translates technical complexity into guided, human-centred products so you can grow with precision and calm.
+            {hero.description}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -124,15 +107,15 @@ export function Hero() {
               href="#contact"
               className="rounded-full bg-mint px-7 py-3 text-sm font-semibold tracking-[0.16em] text-bgDark shadow-[0_18px_40px_-20px_rgba(139,228,200,0.8)] transition-all hover:bg-sky hover:shadow-[0_18px_36px_-18px_rgba(82,214,255,0.7)]"
             >
-              Let’s talk about your project
+              {hero.primaryCta}
             </a>
             <a href="#services" className="text-sm font-medium text-white/70 transition-colors hover:text-white">
-              Explore our solutions →
+              {hero.secondaryCta}
             </a>
           </div>
 
           <div className="mt-14 grid gap-4 text-xs text-white/60 sm:grid-cols-3">
-            {highlights.map((item, index) => (
+            {hero.highlights.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -158,17 +141,17 @@ export function Hero() {
           className="z-10 flex flex-1 justify-center"
         >
           <div className="relative w-full max-w-xl space-y-6 rounded-[36px] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
-                Caregiver dashboard
-              </p>
+            <div className="pointer-events-none absolute -top-20 right-10 h-32 w-32 rounded-full bg-gradient-to-br from-mint/30 to-sky/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 left-10 h-36 w-36 rounded-full bg-gradient-to-br from-sky/20 to-transparent blur-3xl" />
+            <div className="relative flex items-center justify-between">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">{hero.cardLabel}</p>
               <span className="rounded-full bg-mint/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-mint">
-                Live support
+                {hero.cardStatus}
               </span>
             </div>
 
-            <div className="space-y-5">
-              {timeline.map((step, index) => (
+            <div className="relative space-y-5">
+              {hero.timeline.map((step, index) => (
                 <motion.div
                   key={step.label}
                   initial={{ opacity: 0, y: 10 }}
@@ -185,8 +168,9 @@ export function Hero() {
               ))}
             </div>
 
-            <div className="rounded-2xl border border-mint/40 bg-mint/10 p-5 text-sm text-mint shadow-[0_14px_30px_-24px_rgba(139,228,200,0.8)]">
-              Every milestone includes visibility into decisions, scope, and results—no more guessing how your product is progressing.
+            <div className="relative rounded-2xl border border-mint/40 bg-mint/10 p-5 text-sm text-mint shadow-[0_14px_30px_-24px_rgba(139,228,200,0.8)]">
+              <span className="pointer-events-none absolute -top-6 right-6 h-10 w-10 rounded-full bg-gradient-to-b from-white/30 to-transparent blur-lg" />
+              {hero.cardNote}
             </div>
           </div>
         </motion.div>
