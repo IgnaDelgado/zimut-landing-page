@@ -56,15 +56,17 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="section-title">
-              Ready to grow with clarity and technology?
+              Let’s co-create the next chapter of your product story.
             </h2>
             <p className="section-subtitle">
-              Share the challenges on your roadmap. We’ll answer with a guided next step, clear timing, and a team dedicated to staying close from day one.
+              Share where you are today, the friction you feel and the outcomes
+              you seek. We will respond with a thoughtful roadmap and a caring
+              team ready to walk beside you.
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
-              <li>• Founder-led teams needing focus amid rapid change.</li>
-              <li>• Organisations modernising mission-critical platforms.</li>
-              <li>• Leaders exploring AI with responsibility and care.</li>
+            <ul className="mt-4 space-y-2 text-sm text-white/60">
+              <li>• Founder-led teams seeking momentum with limited capacity.</li>
+              <li>• Established organisations modernising mission-critical tools.</li>
+              <li>• Leaders exploring AI adoption with responsibility and care.</li>
             </ul>
           </motion.div>
 
@@ -131,8 +133,9 @@ export function Contact() {
               type="submit"
               disabled={status === "loading"}
               className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark transition-colors hover:bg-sky disabled:opacity-60"
+
             >
-              {status === "loading" ? "Sending..." : "Let’s get started"}
+              {status === "loading" ? "Sending..." : "Let’s begin"}
             </button>
           </motion.form>
         </div>

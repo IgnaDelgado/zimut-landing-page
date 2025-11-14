@@ -37,7 +37,7 @@ export function Navbar() {
             Benefits
           </a>
           <a href="#why" className="hover:text-white">
-            Why ZIMUT
+            Why Guidelight
           </a>
           <a href="#contact" className="hover:text-white">
             Contact
