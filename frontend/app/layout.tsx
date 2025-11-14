@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
+import { LanguageProvider } from "@/components/LanguageProvider";
+
 export const metadata: Metadata = {
   title: "ZIMUT | Software clarity guided by AI care",
   description:
@@ -14,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
