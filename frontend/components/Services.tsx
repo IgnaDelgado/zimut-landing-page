@@ -4,35 +4,34 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web & app experiences",
-    desc: "Custom platforms across web, mobile, and desktop designed to feel effortless for your users and resilient for your teams.",
-    tags: ["Product strategy", "Full-stack squads", "Quality-first delivery"]
+    title: "Web & app development",
+    desc: "Websites, platforms, and mobile apps crafted to feel effortless for your users and resilient for your teams.",
+    tags: ["Product strategy", "Full-stack squads", "Experience design"]
   },
   {
-    title: "AI woven into your operations",
-    desc: "We identify where intelligence adds value—from copilots to knowledge hubs—and integrate it with governance and clarity.",
-    tags: ["Responsible AI", "Automation", "Custom agents"]
+    title: "AI integration across processes",
+    desc: "From virtual agents to production insights, we adapt AI to your operations only when it provides real leverage.",
+    tags: ["Responsible AI", "Knowledge hubs", "Copilot design"]
   },
   {
-    title: "Process automation",
-    desc: "Orchestrate workflows that remove repetitive work, sync data, and keep your people focused on high-impact decisions.",
+    title: "Task and workflow automation",
+    desc: "Automate repetitive work, orchestrate data, and keep people focused on the decisions that grow the business.",
     tags: ["Workflow design", "System integrations", "Data visibility"]
   },
   {
     title: "Modernisation & digitalisation",
-    desc: "Transform legacy tools into modern ecosystems with upgraded architecture, security, and documentation you can trust.",
+    desc: "Upgrade legacy systems into modern ecosystems with security, scalability, and clear documentation built in.",
     tags: ["Legacy rebuilds", "Cloud journeys", "UX refresh"]
   },
   {
-    title: "Bespoke systems",
-    desc: "Build specialised solutions that map directly to your business rules, ensuring scalability without sacrificing nuance.",
+    title: "Tailor-made systems",
+    desc: "Bespoke solutions aligned to your industry, processes, and regulations—no templates, only what you need.",
     tags: ["Domain-driven design", "API-first", "Scalable foundations"]
   },
   {
-    title: "Care & continuous support",
-    desc: "Stay confident post-launch with proactive monitoring, optimisation, and a team that evolves alongside your goals.",
-    tags: ["SLA-backed", "Enablement", "Ongoing improvement"]
-
+    title: "Maintenance & continuous care",
+    desc: "Proactive monitoring, optimisation, and enablement so your technology stays ahead of what’s next.",
+    tags: ["SLA-backed", "Ongoing improvement", "Team enablement"]
   }
 ];
 
@@ -49,10 +48,9 @@ export function Services() {
         >
           <h2 className="section-title">We craft software shaped around your needs.</h2>
           <p className="section-subtitle">
-            ZIMUT builds robust, scalable solutions with AI as a strategic ally. Every engagement starts with understanding your context and ends with a product that feels tailored, calm, and future-ready.
+            Our team designs robust, scalable solutions that honour your context. AI is always an option, never a gimmick—used only when it amplifies impact for your users and teams.
           </p>
         </motion.div>
-
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((s, i) => (

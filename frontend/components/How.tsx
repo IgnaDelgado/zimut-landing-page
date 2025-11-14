@@ -5,20 +5,19 @@ import { motion } from "framer-motion";
 const steps = [
   {
     title: "1. Understand",
-    desc: "Deep-dive sessions map your business, systems, and the friction holding you back. We capture goals and constraints clearly."
+    desc: "We dive into how your system works today, the people behind it, and the problems slowing you down."
   },
   {
     title: "2. Design with clarity",
-    desc: "We co-create a roadmap, define success metrics, and outline the architecture—evaluating AI only when it adds true value."
+    desc: "Together we define a clear, scalable solution, outlining scope, success metrics, and the right technology mix."
   },
   {
     title: "3. Build & automate",
-    desc: "Multidisciplinary squads deliver in visible increments, blending robust engineering, security, and purposeful automation."
+    desc: "Cross-functional squads deliver in steady increments with quality, security, and maintainability at the core."
   },
   {
     title: "4. Support & evolve",
-    desc: "Post-launch, we train teams, monitor outcomes, and iterate so your product stays aligned with your growth."
-
+    desc: "We stay close after launch—training, monitoring, and iterating so your product keeps pace with the business."
   }
 ];
 
@@ -35,8 +34,7 @@ export function How() {
         >
           <h2 className="section-title">A process that looks after your business.</h2>
           <p className="section-subtitle">
-            Transparent rituals, proactive updates, and shared tools keep you grounded. We move with you, not ahead of you, so every decision supports the original vision.
-
+            We stay in sync from discovery to launch: transparent rituals, visible progress, and shared decision making so nothing drifts from the original vision.
           </p>
         </motion.div>
 
@@ -63,9 +61,9 @@ export function How() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 rounded-2xl border border-mint/20 bg-mint/10 p-6 text-sm text-mint"
+          className="mt-12 rounded-2xl border border-mint/20 bg-mint/10 p-6 text-sm text-mint"
         >
-          Always evaluating AI’s role: we introduce intelligence where it amplifies outcomes, ensuring automation supports people rather than replacing them.
+          We always evaluate whether AI adds strategic value. If it helps, we integrate it with intention. If it doesn’t, we keep the solution simple and effective.
         </motion.div>
       </div>
     </section>

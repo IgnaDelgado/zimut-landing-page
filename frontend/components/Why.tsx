@@ -17,14 +17,13 @@ export function Why() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-title">
-              We bring clarity to a technological world full of noise.
+              We bring clarity to a world saturated with technological noise.
             </h2>
             <p className="mt-4 text-sm md:text-base text-white/70">
-              Businesses are flooded with hype about AI, trends, and quick wins. Teams know they must evolve, yet the map to real transformation feels foggy and overwhelming.
+              Companies are overwhelmed by artificial intelligence promises, shiny new tools, and contradictory advice. Growth feels urgent, yet the path is foggy.
             </p>
             <p className="mt-3 text-sm md:text-base text-white/70">
-              ZIMUT exists to translate complexity into confidence. We listen, ask the right questions, and design software that respects your people while unlocking meaningful growth.
-
+              ZIMUT’s purpose is to simplify the complex. We translate ideas into tangible roadmaps, build with honesty, and deliver software that genuinely helps people and businesses thrive.
             </p>
           </motion.div>
 
@@ -36,15 +35,14 @@ export function Why() {
             className="card-glass border-white/10 bg-white/5 p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-              What we stand for
+              Why teams choose ZIMUT
             </p>
             <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li>• Honest conversations that reveal the real problem to solve.</li>
-              <li>• Responsible AI adoption grounded in measurable value.</li>
-              <li>• Effective simplicity that keeps users confident and loyal.</li>
-              <li>• Transparency in scope, timing, and investment from day one.</li>
-              <li>• Shared metrics so we grow sustainably—together.</li>
-
+              <li>• Honest conversations that surface the real problem to solve.</li>
+              <li>• Responsible AI adoption grounded in measurable, long-term value.</li>
+              <li>• Effective simplicity so users feel confident, not confused.</li>
+              <li>• Transparency across scope, timing, and investment from day one.</li>
+              <li>• Shared metrics that nurture sustainable growth together.</li>
             </ul>
           </motion.div>
         </div>

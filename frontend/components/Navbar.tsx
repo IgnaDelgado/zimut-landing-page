@@ -23,7 +23,6 @@ export function Navbar() {
           <div>
             <p className="text-lg font-semibold tracking-wide">ZIMUT</p>
             <p className="text-xs text-white/50">Guiding software clarity with AI care</p>
-
           </div>
         </div>
 

@@ -11,7 +11,6 @@ const config = {
         mint: "#8BE4C8",
         sky: "#52D6FF",
         sand: "#F5F5F5",
-
         smoke: "#EFEFEF"
       },
       fontFamily: {
