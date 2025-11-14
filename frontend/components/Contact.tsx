@@ -3,9 +3,6 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
-
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">(
     "idle"
@@ -17,122 +14,124 @@ export function Contact() {
     setStatus("loading");
     setError("");
 
-    const formData = new FormData(e.currentTarget);
-    const payload = {
-      name: String(formData.get("name") || ""),
-      email: String(formData.get("email") || ""),
-      company: String(formData.get("company") || ""),
-      message: String(formData.get("message") || "")
-    };
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      setStatus("error");
+      setError("Please fill in all required fields.");
+      return;
+    }
 
     try {
-      const res = await fetch(`${API_BASE_URL}/contact`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify({ name, email, company, message }),
       });
 
-      if (!res.ok) throw new Error("error");
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || "Error sending message");
+      }
 
       setStatus("ok");
-      e.currentTarget.reset();
-    } catch {
+      form.reset();
+    } catch (err: any) {
+      console.error(err);
       setStatus("error");
-      setError("Something went wrong while sending your message. Please try again.");
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setStatus((prev) => (prev === "loading" ? "idle" : prev));
     }
   }
 
   return (
-    <section
-      id="contact"
-      className="border-t border-white/5 bg-gradient-to-b from-black to-bgDark"
-    >
-      <div className="mx-auto max-w-6xl section-padding">
-        <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] items-start">
-          <motion.div
-            initial={{ x: -20, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="section-title">
-              Ready to give your project a clear direction?
-            </h2>
-            <p className="section-subtitle">
-              Tell us where your business is today and what you would like to
-              improve. We will get back to you with a grounded, honest proposal,
-              not a generic pitch deck.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-white/60">
-              <li>• Small businesses taking their first digital step.</li>
-              <li>• Teams that want to automate without losing control.</li>
-              <li>• Companies exploring AI in a pragmatic way.</li>
-            </ul>
-          </motion.div>
+    <section id="contact" className="bg-black py-16 text-white">
+      <div className="mx-auto flex max-w-4xl flex-col gap-10 px-4 md:flex-row">
+        <div className="md:w-1/2">
+          <h2 className="text-3xl font-semibold">Let&apos;s talk</h2>
+          <p className="mt-3 text-sm text-white/70">
+            Tell us briefly about your project, and we&apos;ll come back with
+            ideas, questions and next steps.
+          </p>
+        </div>
 
+        <div className="md:w-1/2">
           <motion.form
             onSubmit={handleSubmit}
-            initial={{ x: 20, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="card-glass space-y-4 p-5 text-sm"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-4 rounded-2xl bg-white/5 p-5 backdrop-blur"
           >
-            <div>
-              <label className="mb-1 block text-xs text-white/60">
-                Name *
-              </label>
-              <input
-                required
-                name="name"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
-              />
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <label className="mb-1 block text-xs text-white/60">
+                  Name *
+                </label>
+                <input
+                  name="name"
+                  className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
+                  required
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs text-white/60">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
+                  required
+                />
+              </div>
             </div>
-            <div>
-              <label className="mb-1 block text-xs text-white/60">
-                Email *
-              </label>
-              <input
-                required
-                type="email"
-                name="email"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
-              />
-            </div>
+
             <div>
               <label className="mb-1 block text-xs text-white/60">
                 Company / Project
               </label>
               <input
                 name="company"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
               />
             </div>
+
             <div>
               <label className="mb-1 block text-xs text-white/60">
                 Tell us briefly what you need *
               </label>
               <textarea
-                required
                 name="message"
                 rows={4}
-                className="w-full resize-none rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-mint"
+                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
+                required
               />
             </div>
 
             {status === "ok" && (
-              <p className="text-xs text-mint">
-                ✅ Thanks for reaching out. We will get back to you soon.
+              <p className="text-sm text-emerald-400">
+                Your message has been sent. We&apos;ll get back to you soon.
               </p>
             )}
+
             {status === "error" && (
-              <p className="text-xs text-red-400">{error}</p>
+              <p className="text-sm text-red-400">
+                {error || "Something went wrong. Please try again."}
+              </p>
             )}
 
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark hover:bg-cyanSoft transition-colors disabled:opacity-60"
+              className="flex w-full items-center justify-center rounded-xl bg-cyan-400 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-cyan-300 disabled:opacity-60"
             >
               {status === "loading" ? "Sending..." : "Send message"}
             </button>
