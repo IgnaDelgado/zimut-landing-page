@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZIMUT | Technology that guides your business",
+  title: "ZIMUT | Software clarity guided by AI care",
   description:
-    "ZIMUT brings clarity to software and AI, creating robust, tailored solutions that help your business grow with confidence."
+    "ZIMUT designs bespoke software and responsible AI solutions that simplify complexity, accelerate growth, and keep teams confident from discovery to scale."
 };
 
 export default function RootLayout({

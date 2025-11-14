@@ -45,10 +45,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-white/5 bg-gradient-to-b from-black to-bgDark"
+      className="border-t border-white/5 bg-gradient-to-b from-black via-[#0F0F12] to-bgDark"
     >
-      <div className="mx-auto max-w-6xl section-padding">
-        <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] items-start">
+      <div className="mx-auto max-w-7xl section-padding">
+        <div className="grid items-start gap-10 md:grid-cols-[1.05fr_1fr]">
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -56,17 +56,15 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="section-title">
-              Ready to give your project a clear direction?
+              Ready to grow with clarity and technology?
             </h2>
             <p className="section-subtitle">
-              Tell us where your business is today and what you would like to
-              improve. We will get back to you with a grounded, honest proposal,
-              not a generic pitch deck.
+              Share the challenges on your roadmap. We’ll answer with a guided next step, clear timing, and a team dedicated to staying close from day one.
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-white/60">
-              <li>• Small businesses taking their first digital step.</li>
-              <li>• Teams that want to automate without losing control.</li>
-              <li>• Companies exploring AI in a pragmatic way.</li>
+            <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <li>• Founder-led teams needing focus amid rapid change.</li>
+              <li>• Organisations modernising mission-critical platforms.</li>
+              <li>• Leaders exploring AI with responsibility and care.</li>
             </ul>
           </motion.div>
 
@@ -76,7 +74,7 @@ export function Contact() {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="card-glass space-y-4 p-5 text-sm"
+            className="card-glass space-y-4 border-white/10 bg-white/5 p-6 text-sm"
           >
             <div>
               <label className="mb-1 block text-xs text-white/60">
@@ -122,7 +120,7 @@ export function Contact() {
 
             {status === "ok" && (
               <p className="text-xs text-mint">
-                ✅ Thanks for reaching out. We will get back to you soon.
+                ✅ Thanks for reaching out. We will be in touch shortly.
               </p>
             )}
             {status === "error" && (
@@ -132,9 +130,9 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark hover:bg-cyanSoft transition-colors disabled:opacity-60"
+              className="flex w-full items-center justify-center rounded-full bg-mint px-4 py-2 text-sm font-semibold text-bgDark transition-colors hover:bg-sky disabled:opacity-60"
             >
-              {status === "loading" ? "Sending..." : "Send message"}
+              {status === "loading" ? "Sending..." : "Let’s get started"}
             </button>
           </motion.form>
         </div>
