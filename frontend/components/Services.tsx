@@ -38,13 +38,13 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="border-t border-white/5 bg-bgDark">
-      <div className="mx-auto max-w-7xl section-padding">
+      <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="mb-10 max-w-2xl"
+          className="mb-12 max-w-3xl"
         >
           <h2 className="section-title">We craft software shaped around your needs.</h2>
           <p className="section-subtitle">
@@ -59,9 +59,13 @@ export function Services() {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="card-glass border-white/10 bg-white/5 p-6"
+              transition={{ duration: 0.45, delay: i * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="card-glass group relative overflow-hidden p-6"
             >
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-br from-mint/0 via-white/5 to-sky/0" />
+              </div>
               <h3 className="text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm text-white/65">{s.desc}</p>
               <div className="mt-3 flex flex-wrap gap-2 text-xs text-white/60">

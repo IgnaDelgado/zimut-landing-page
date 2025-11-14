@@ -7,21 +7,44 @@
 }
 
 body {
-  @apply bg-bgDark text-white font-sans antialiased;
+  @apply bg-gradient-to-b from-[#050507] via-bgDark to-black text-white font-sans antialiased;
 }
 
 .card-glass {
-  @apply bg-white/5 border border-white/10 rounded-2xl backdrop-blur-lg shadow-xl;
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0px_20px_60px_-30px_rgba(0,0,0,0.8)];
+}
+
+.section-wrapper {
+  @apply mx-auto w-full max-w-[1400px] px-6 sm:px-12 lg:px-16;
 }
 
 .section-padding {
-  @apply px-5 py-16 md:px-8 md:py-20;
+  @apply py-20 md:py-24;
 }
 
 .section-title {
-  @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  @apply text-balance text-3xl font-semibold tracking-tight md:text-4xl lg:text-[44px] lg:leading-[1.15];
 }
 
 .section-subtitle {
-  @apply mt-3 text-sm md:text-base text-white/60 max-w-xl;
+  @apply mt-4 max-w-2xl text-sm text-white/65 md:text-base lg:text-lg;
+}
+
+@keyframes float-soft {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 12s ease-in-out infinite;
 }
