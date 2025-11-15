@@ -34,7 +34,7 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="hidden items-center gap-6 text-sm text-zimut-gray-300 lg:flex">
+        <div className="hidden items-center gap-6 text-sm font-semibold text-zimut-gray-300 lg:flex">
           {navLinks.map((item) => (
             <a
               key={item.id}

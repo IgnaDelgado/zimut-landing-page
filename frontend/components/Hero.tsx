@@ -38,7 +38,7 @@ export function Hero() {
           </span>
 
           <div className="space-y-6">
-            <h1 className="text-balance text-4xl font-semibold leading-tight text-zimut-gray-0 sm:text-5xl lg:text-6xl">
+            <h1 className="text-balance text-4xl font-bold leading-tight text-zimut-gray-0 sm:text-5xl lg:text-6xl">
               {hero.title}
             </h1>
             <p className="max-w-2xl text-base text-zimut-gray-300 sm:text-lg">{hero.description}</p>

@@ -31,7 +31,7 @@ export function Benefits() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="card-glass flex h-full flex-col gap-3 p-6"
             >
-              <p className="text-sm font-semibold text-zimut-gray-0">{benefit.title}</p>
+              <p className="text-sm font-bold text-zimut-gray-0">{benefit.title}</p>
               <p className="text-sm text-zimut-gray-300">{benefit.description}</p>
             </motion.div>
           ))}
