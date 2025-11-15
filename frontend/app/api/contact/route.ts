@@ -2,9 +2,30 @@ import { Resend } from "resend";
 
 export async function POST(req: Request) {
   const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.RESEND_FROM_EMAIL || "ZIMUT <onboarding@resend.dev>";
+  const recipientsEnv = process.env.CONTACT_TO_EMAIL || process.env.RESEND_TO_EMAIL;
 
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is missing");
+  if (!apiKey || !recipientsEnv) {
+    console.error("Missing email configuration", {
+      hasApiKey: Boolean(apiKey),
+      hasRecipients: Boolean(recipientsEnv),
+    });
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: "Server email configuration error",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
+  const recipients = recipientsEnv
+    .split(",")
+    .map((address) => address.trim())
+    .filter(Boolean);
+
+  if (recipients.length === 0) {
+    console.error("No valid recipients configured");
     return new Response(
       JSON.stringify({
         success: false,
@@ -42,10 +63,11 @@ export async function POST(req: Request) {
     ].join("\n");
 
     const { data, error } = await resend.emails.send({
-      from: "ZIMUT <onboarding@resend.dev>", // 👈 PROBAR ASÍ PRIMERO
-      to: ["ignadelgado21@gmail.com"],
+      from,
+      to: recipients,
       subject: "New contact from ZIMUT website",
       text,
+      reply_to: email,
     });
 
     if (error) {
