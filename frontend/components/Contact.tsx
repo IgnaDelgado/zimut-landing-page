@@ -64,7 +64,7 @@ export function Contact() {
           className="space-y-6"
         >
           <div>
-            <h2 className="text-3xl font-semibold text-zimut-gray-0 sm:text-4xl">{contact.title}</h2>
+            <h2 className="text-3xl font-bold text-zimut-gray-0 sm:text-4xl">{contact.title}</h2>
             <p className="mt-3 text-sm text-zimut-gray-300 sm:text-base">{contact.subtitle}</p>
           </div>
           <div className="grid gap-3 text-xs text-zimut-gray-300 sm:grid-cols-2">

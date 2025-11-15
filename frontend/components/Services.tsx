@@ -31,7 +31,7 @@ export function Services() {
               transition={{ duration: 0.45, delay: i * 0.08 }}
               className="card-glass flex h-full flex-col gap-3 p-6"
             >
-              <h3 className="text-lg font-semibold text-zimut-gray-0">{service.title}</h3>
+              <h3 className="text-lg font-bold text-zimut-gray-0">{service.title}</h3>
               <p className="text-sm text-zimut-gray-300">{service.desc}</p>
               <div className="mt-2 flex flex-wrap gap-2 text-[11px] text-zimut-green-300">
                 {service.tags.map((tag) => (
