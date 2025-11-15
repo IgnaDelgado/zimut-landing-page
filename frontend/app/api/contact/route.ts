@@ -1,9 +1,9 @@
 import { Resend } from "resend";
 
 export async function POST(req: Request) {
-  const apiKey = process.env.local.RESEND_API_KEY;
-  const from = process.env.local.RESEND_FROM_EMAIL || "ZIMUT <onboarding@resend.dev>";
-  const recipientsEnv = process.env.local.CONTACT_TO_EMAIL || process.env.local.RESEND_TO_EMAIL;
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.RESEND_FROM_EMAIL || "ZIMUT <onboarding@resend.dev>";
+  const recipientsEnv = process.env.CONTACT_TO_EMAIL || process.env.RESEND_TO_EMAIL;
 
   if (!apiKey || !recipientsEnv) {
     console.error("Missing email configuration", {
