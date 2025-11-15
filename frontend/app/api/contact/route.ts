@@ -67,7 +67,7 @@ export async function POST(req: Request) {
       to: recipients,
       subject: "New contact from ZIMUT website",
       text,
-      reply_to: email,
+      replyTo: email,
     });
 
     if (error) {
