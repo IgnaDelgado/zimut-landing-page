@@ -7,9 +7,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/5 bg-black">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-mint/40 to-transparent" />
-      <div className="section-wrapper flex flex-col gap-3 py-8 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+    <footer className="border-t border-zimut-gray-800 bg-zimut-gray-900">
+      <div className="section-wrapper flex flex-col gap-2 py-8 text-xs text-zimut-gray-400 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} ZIMUT. {footer.rights}
         </p>

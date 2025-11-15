@@ -3,31 +3,51 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-gradient-to-b from-[#050507] via-bgDark to-black text-white font-sans antialiased;
-}
-
-.card-glass {
-  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0px_20px_60px_-30px_rgba(0,0,0,0.8)];
+  @apply min-h-screen bg-zimut-gray-900 font-sans text-zimut-gray-100 antialiased;
 }
 
 .section-wrapper {
-  @apply mx-auto w-full max-w-[1400px] px-6 sm:px-12 lg:px-16;
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }
 
 .section-padding {
-  @apply py-20 md:py-24;
+  @apply py-16 sm:py-20 lg:py-24;
 }
 
 .section-title {
-  @apply text-balance text-3xl font-semibold tracking-tight md:text-4xl lg:text-[44px] lg:leading-[1.15];
+  @apply text-balance text-3xl font-semibold leading-tight tracking-tight text-zimut-gray-0 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
 }
 
 .section-subtitle {
-  @apply mt-4 max-w-2xl text-sm text-white/65 md:text-base lg:text-lg;
+  @apply mt-4 max-w-2xl text-base text-zimut-gray-300 sm:text-lg;
+}
+
+.card-glass {
+  @apply rounded-2xl border border-zimut-gray-700 bg-zimut-gray-800/80 shadow-lift;
+}
+
+.eyebrow {
+  @apply font-mono text-[11px] uppercase tracking-[0.28em] text-zimut-gray-400;
+}
+
+.badge-soft {
+  @apply inline-flex items-center gap-2 rounded-full border border-zimut-gray-700 bg-zimut-gray-800 px-3 py-1 text-xs font-medium text-zimut-gray-200;
+}
+
+.cta-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-zimut-green-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-zimut-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zimut-green-600;
+}
+
+.cta-secondary {
+  @apply inline-flex items-center gap-2 text-sm font-medium text-zimut-gray-200 underline-offset-4 transition-colors hover:text-zimut-green-400 hover:underline;
+}
+
+.card-note {
+  @apply rounded-2xl border border-zimut-green-700 bg-zimut-green-900/30 p-5 text-sm text-zimut-green-200;
 }
 
 @keyframes float-soft {

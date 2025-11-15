@@ -55,97 +55,98 @@ export function Contact() {
   const isLoading = status === "loading";
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-black py-20 text-white">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-10%] top-[-5%] h-80 w-80 rounded-full bg-gradient-to-br from-mint/20 to-transparent blur-3xl" />
-        <div className="absolute right-[-15%] bottom-[-15%] h-96 w-96 rounded-full bg-gradient-to-br from-sky/25 to-transparent blur-3xl" />
-      </div>
-      <div className="relative mx-auto flex max-w-5xl flex-col gap-12 px-6 md:flex-row md:items-start">
+    <section id="contact" className="border-b border-zimut-gray-800 bg-zimut-gray-900">
+      <div className="section-wrapper section-padding grid gap-10 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:items-start">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="md:w-5/12"
+          className="space-y-6"
         >
-          <h2 className="text-3xl font-semibold md:text-4xl">{contact.title}</h2>
-          <p className="mt-3 text-sm text-white/70 md:text-base">{contact.subtitle}</p>
-          <div className="mt-8 grid gap-4 text-xs text-white/60 sm:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-semibold text-zimut-gray-0 sm:text-4xl">{contact.title}</h2>
+            <p className="mt-3 text-sm text-zimut-gray-300 sm:text-base">{contact.subtitle}</p>
+          </div>
+          <div className="grid gap-3 text-xs text-zimut-gray-300 sm:grid-cols-2">
             {contact.pills.map((pill) => (
               <span
                 key={pill}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-center uppercase tracking-[0.28em]"
+                className="flex items-center justify-center rounded-full border border-zimut-gray-700 bg-zimut-gray-800 px-3 py-2 font-mono uppercase tracking-[0.28em] text-zimut-green-300"
               >
+                <span aria-hidden className="mr-2 text-zimut-green-300">▹</span>
                 {pill}
               </span>
             ))}
           </div>
         </motion.div>
 
-        <div className="md:w-7/12">
-          <motion.form
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="relative space-y-4 overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur"
-          >
-            <div className="pointer-events-none absolute -top-20 left-14 h-40 w-40 rounded-full bg-gradient-to-br from-mint/30 to-transparent blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 right-6 h-48 w-48 rounded-full bg-gradient-to-br from-sky/25 to-transparent blur-3xl" />
-            <div className="relative grid gap-4 md:grid-cols-2">
-              <div>
-                <label className="mb-1 block text-xs text-white/60">{contact.fields.name}</label>
-                <input
-                  name="name"
-                  className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
-                  required
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs text-white/60">{contact.fields.email}</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="relative">
-              <label className="mb-1 block text-xs text-white/60">{contact.fields.company}</label>
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="card-glass space-y-4 p-6"
+        >
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.name}</label>
               <input
-                name="company"
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
-              />
-            </div>
-
-            <div className="relative">
-              <label className="mb-1 block text-xs text-white/60">{contact.fields.message}</label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-cyan-400"
+                name="name"
+                className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
                 required
               />
             </div>
+            <div>
+              <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.email}</label>
+              <input
+                type="email"
+                name="email"
+                className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
+                required
+              />
+            </div>
+          </div>
 
-            {status === "ok" && (
-              <p className="relative text-sm text-emerald-400">{contact.success}</p>
-            )}
+          <div>
+            <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.company}</label>
+            <input
+              name="company"
+              className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
+            />
+          </div>
 
-            {status === "error" && (
-              <p className="relative text-sm text-red-400">{errorMessage || contact.error}</p>
-            )}
+          <div>
+            <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.message}</label>
+            <textarea
+              name="message"
+              rows={4}
+              className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
+              required
+            />
+          </div>
 
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="relative flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-mint to-sky px-4 py-3 text-sm font-semibold text-bgDark transition-transform hover:-translate-y-0.5 disabled:opacity-60"
-            >
-              <span>{isLoading ? contact.sending : contact.submit}</span>
-            </button>
-          </motion.form>
-        </div>
+          {status === "ok" && (
+            <p className="flex items-center gap-2 rounded-xl border border-zimut-green-700 bg-zimut-green-900/30 px-3 py-2 text-sm text-zimut-green-200">
+              <span aria-hidden className="text-zimut-green-300">✓</span>
+              {contact.success}
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="flex items-center gap-2 rounded-xl border border-red-500/60 bg-red-500/10 px-3 py-2 text-sm text-red-200">
+              <span aria-hidden className="text-red-300">!</span>
+              {errorMessage || contact.error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="cta-primary flex w-full justify-center text-sm disabled:opacity-60"
+          >
+            {isLoading ? contact.sending : contact.submit}
+          </button>
+        </motion.form>
       </div>
     </section>
   );
