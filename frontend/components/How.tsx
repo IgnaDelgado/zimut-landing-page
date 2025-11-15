@@ -8,7 +8,7 @@ export function How() {
   const { how } = useLanguage().content;
 
   return (
-    <section id="how" className="border-b border-zimut-gray-200 bg-white">
+    <section id="how" className="border-b border-zimut-gray-800 bg-zimut-gray-900">
       <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -31,8 +31,8 @@ export function How() {
               transition={{ duration: 0.4, delay: i * 0.12 }}
               className="card-glass flex h-full flex-col gap-3 p-6"
             >
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-zimut-green-700">{step.title}</p>
-              <p className="text-sm text-zimut-gray-700">{step.desc}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-zimut-green-300">{step.title}</p>
+              <p className="text-sm text-zimut-gray-300">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -42,10 +42,10 @@ export function How() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.55, delay: 0.4 }}
-          className="mt-12 rounded-2xl border border-zimut-green-200 bg-zimut-green-100/70 p-6 text-sm text-zimut-green-800"
+          className="mt-12 rounded-2xl border border-zimut-green-700 bg-zimut-green-900/30 p-6 text-sm text-zimut-green-200"
         >
           <div className="flex items-start gap-3">
-            <span aria-hidden className="mt-0.5 text-zimut-green-700">ℹ︎</span>
+            <span aria-hidden className="mt-0.5 text-zimut-green-300">ℹ︎</span>
             <p>{how.aiNote}</p>
           </div>
         </motion.div>

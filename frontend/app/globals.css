@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply min-h-screen bg-zimut-gray-0 font-sans text-zimut-gray-900 antialiased;
+  @apply min-h-screen bg-zimut-gray-900 font-sans text-zimut-gray-100 antialiased;
 }
 
 .section-wrapper {
@@ -19,23 +19,23 @@ body {
 }
 
 .section-title {
-  @apply text-balance text-3xl font-semibold leading-tight tracking-tight text-zimut-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
+  @apply text-balance text-3xl font-semibold leading-tight tracking-tight text-zimut-gray-0 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
 }
 
 .section-subtitle {
-  @apply mt-4 max-w-2xl text-base text-zimut-gray-700 sm:text-lg;
+  @apply mt-4 max-w-2xl text-base text-zimut-gray-300 sm:text-lg;
 }
 
 .card-glass {
-  @apply rounded-2xl border border-zimut-gray-200 bg-white shadow-lift;
+  @apply rounded-2xl border border-zimut-gray-700 bg-zimut-gray-800/80 shadow-lift;
 }
 
 .eyebrow {
-  @apply font-mono text-[11px] uppercase tracking-[0.28em] text-zimut-gray-600;
+  @apply font-mono text-[11px] uppercase tracking-[0.28em] text-zimut-gray-400;
 }
 
 .badge-soft {
-  @apply inline-flex items-center gap-2 rounded-full border border-zimut-gray-200 bg-zimut-gray-0 px-3 py-1 text-xs font-medium text-zimut-gray-700;
+  @apply inline-flex items-center gap-2 rounded-full border border-zimut-gray-700 bg-zimut-gray-800 px-3 py-1 text-xs font-medium text-zimut-gray-200;
 }
 
 .cta-primary {
@@ -43,11 +43,11 @@ body {
 }
 
 .cta-secondary {
-  @apply inline-flex items-center gap-2 text-sm font-medium text-zimut-gray-800 underline-offset-4 transition-colors hover:text-zimut-green-700 hover:underline;
+  @apply inline-flex items-center gap-2 text-sm font-medium text-zimut-gray-200 underline-offset-4 transition-colors hover:text-zimut-green-400 hover:underline;
 }
 
 .card-note {
-  @apply rounded-2xl border border-zimut-green-200 bg-zimut-green-100/70 p-5 text-sm text-zimut-green-800;
+  @apply rounded-2xl border border-zimut-green-700 bg-zimut-green-900/30 p-5 text-sm text-zimut-green-200;
 }
 
 @keyframes float-soft {

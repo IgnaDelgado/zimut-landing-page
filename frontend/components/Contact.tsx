@@ -55,7 +55,7 @@ export function Contact() {
   const isLoading = status === "loading";
 
   return (
-    <section id="contact" className="border-b border-zimut-gray-200 bg-white">
+    <section id="contact" className="border-b border-zimut-gray-800 bg-zimut-gray-900">
       <div className="section-wrapper section-padding grid gap-10 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:items-start">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,16 +64,16 @@ export function Contact() {
           className="space-y-6"
         >
           <div>
-            <h2 className="text-3xl font-semibold text-zimut-gray-900 sm:text-4xl">{contact.title}</h2>
-            <p className="mt-3 text-sm text-zimut-gray-700 sm:text-base">{contact.subtitle}</p>
+            <h2 className="text-3xl font-semibold text-zimut-gray-0 sm:text-4xl">{contact.title}</h2>
+            <p className="mt-3 text-sm text-zimut-gray-300 sm:text-base">{contact.subtitle}</p>
           </div>
-          <div className="grid gap-3 text-xs text-zimut-gray-700 sm:grid-cols-2">
+          <div className="grid gap-3 text-xs text-zimut-gray-300 sm:grid-cols-2">
             {contact.pills.map((pill) => (
               <span
                 key={pill}
-                className="flex items-center justify-center rounded-full border border-zimut-gray-200 bg-zimut-gray-100 px-3 py-2 font-mono uppercase tracking-[0.28em] text-zimut-green-700"
+                className="flex items-center justify-center rounded-full border border-zimut-gray-700 bg-zimut-gray-800 px-3 py-2 font-mono uppercase tracking-[0.28em] text-zimut-green-300"
               >
-                <span aria-hidden className="mr-2 text-zimut-green-700">▹</span>
+                <span aria-hidden className="mr-2 text-zimut-green-300">▹</span>
                 {pill}
               </span>
             ))}
@@ -89,52 +89,52 @@ export function Contact() {
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-xs font-medium text-zimut-gray-700">{contact.fields.name}</label>
+              <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.name}</label>
               <input
                 name="name"
-                className="w-full rounded-xl border border-zimut-gray-300 bg-white px-3 py-2 text-sm text-zimut-gray-900 outline-none transition focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-200"
+                className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
                 required
               />
             </div>
             <div>
-              <label className="mb-1 block text-xs font-medium text-zimut-gray-700">{contact.fields.email}</label>
+              <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.email}</label>
               <input
                 type="email"
                 name="email"
-                className="w-full rounded-xl border border-zimut-gray-300 bg-white px-3 py-2 text-sm text-zimut-gray-900 outline-none transition focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-200"
+                className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
                 required
               />
             </div>
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-medium text-zimut-gray-700">{contact.fields.company}</label>
+            <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.company}</label>
             <input
               name="company"
-              className="w-full rounded-xl border border-zimut-gray-300 bg-white px-3 py-2 text-sm text-zimut-gray-900 outline-none transition focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-200"
+              className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
             />
           </div>
 
           <div>
-            <label className="mb-1 block text-xs font-medium text-zimut-gray-700">{contact.fields.message}</label>
+            <label className="mb-1 block text-xs font-medium text-zimut-gray-300">{contact.fields.message}</label>
             <textarea
               name="message"
               rows={4}
-              className="w-full rounded-xl border border-zimut-gray-300 bg-white px-3 py-2 text-sm text-zimut-gray-900 outline-none transition focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-200"
+              className="w-full rounded-xl border border-zimut-gray-700 bg-zimut-gray-900/60 px-3 py-2 text-sm text-zimut-gray-0 outline-none transition placeholder:text-zimut-gray-500 focus:border-zimut-green-500 focus:ring-2 focus:ring-zimut-green-600/30"
               required
             />
           </div>
 
           {status === "ok" && (
-            <p className="flex items-center gap-2 rounded-xl border border-zimut-green-200 bg-zimut-green-100/70 px-3 py-2 text-sm text-zimut-green-800">
-              <span aria-hidden className="text-zimut-green-700">✓</span>
+            <p className="flex items-center gap-2 rounded-xl border border-zimut-green-700 bg-zimut-green-900/30 px-3 py-2 text-sm text-zimut-green-200">
+              <span aria-hidden className="text-zimut-green-300">✓</span>
               {contact.success}
             </p>
           )}
 
           {status === "error" && (
-            <p className="flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
-              <span aria-hidden>!</span>
+            <p className="flex items-center gap-2 rounded-xl border border-red-500/60 bg-red-500/10 px-3 py-2 text-sm text-red-200">
+              <span aria-hidden className="text-red-300">!</span>
               {errorMessage || contact.error}
             </p>
           )}

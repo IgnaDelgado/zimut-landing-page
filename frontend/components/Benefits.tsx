@@ -8,7 +8,7 @@ export function Benefits() {
   const { benefits } = useLanguage().content;
 
   return (
-    <section id="benefits" className="border-b border-zimut-gray-200 bg-zimut-gray-100">
+    <section id="benefits" className="border-b border-zimut-gray-800 bg-gradient-to-b from-zimut-gray-900 via-zimut-gray-900 to-zimut-gray-800">
       <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -31,8 +31,8 @@ export function Benefits() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="card-glass flex h-full flex-col gap-3 p-6"
             >
-              <p className="text-sm font-semibold text-zimut-gray-900">{benefit.title}</p>
-              <p className="text-sm text-zimut-gray-700">{benefit.description}</p>
+              <p className="text-sm font-semibold text-zimut-gray-0">{benefit.title}</p>
+              <p className="text-sm text-zimut-gray-300">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

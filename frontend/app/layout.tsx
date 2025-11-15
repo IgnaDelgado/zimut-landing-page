@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${raleway.variable} ${plexMono.variable}`}>
-      <body className="bg-zimut-gray-0 text-zimut-gray-900">
+      <body className="bg-zimut-gray-900 text-zimut-gray-100">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
