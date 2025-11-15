@@ -8,7 +8,10 @@ export function Hero() {
   const { hero } = useLanguage().content;
 
   return (
-    <section className="relative overflow-hidden border-b border-zimut-gray-800 bg-gradient-to-b from-zimut-gray-900 via-zimut-gray-900 to-zimut-gray-800">
+    <section
+      id="hero"
+      className="relative overflow-hidden border-b border-zimut-gray-800 bg-gradient-to-b from-zimut-gray-900 via-zimut-gray-900 to-zimut-gray-800"
+    >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-zimut-green-900/40 via-transparent to-transparent" />
         <motion.div
