@@ -15,10 +15,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
-    const stored = (typeof window !== "undefined" && localStorage.getItem("zimut-lang")) as Language | null;
-    if (stored && stored !== language) {
-      setLanguageState(stored);
-    }
+    if (typeof window === "undefined") return;
+    const stored = localStorage.getItem("zimut-lang") as Language | null;
+    if (!stored) return;
+    setLanguageState((prev) => (stored !== prev ? stored : prev));
   }, []);
 
   useEffect(() => {

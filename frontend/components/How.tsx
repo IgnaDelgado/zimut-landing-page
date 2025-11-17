@@ -8,7 +8,7 @@ export function How() {
   const { how } = useLanguage().content;
 
   return (
-    <section id="how" className="border-b border-zimut-gray-800 bg-zimut-gray-900">
+    <section id="plan" className="border-b border-zimut-gray-800 bg-zimut-gray-900">
       <div className="section-wrapper section-padding">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
