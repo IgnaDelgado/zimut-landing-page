@@ -68,6 +68,17 @@ export type TranslationContent = {
     testimonials: { quote: string; author: string; role: string }[];
     stats: { value: string; label: string }[];
   };
+  stakes: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    consequences: { label: string; detail: string }[];
+    finalReminder: string;
+    ctaLabel: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
+  };
   contact: {
     title: string;
     subtitle: string;
@@ -114,51 +125,51 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     hero: {
-      badge: "GUIDED SOFTWARE · STORYBRAND PVU",
-      title: "You stay the hero. We turn AI chaos into a calm growth story.",
+      badge: "STORYBRAND BLUEPRINT · PVU",
+      title: "Lead with the win. We script the PVU that convinces in 5 seconds.",
       description:
-        "SMB leaders deserve a guide, a plan, and tangible wins. ZIMUT listens to your plot, maps the stakes, and builds automations that let your team focus on the customer.",
-      primaryCta: "Book the clarity session",
-      secondaryCta: "Review the playbook →",
+        "Your SaaS landing must answer “What is this and why should I care?” instantly. We choreograph the outcome-focused H1, PVU, dual CTAs, and cinematic WebGL so visitors feel the promised success right away.",
+      primaryCta: "Start your clarity session",
+      secondaryCta: "See the 7-step blueprint →",
       highlights: [
         {
-          title: "Guide with empathy",
-          description: "We listen deeply and translate tech so leadership and squads stay aligned."
+          title: "Outcome-first headline",
+          description: "H1 + H2 link the final success to the exact buyer in clear, human language."
         },
         {
-          title: "Visual battle plan",
-          description: "StoryBrand blueprints show exactly what happens now, next, and later."
+          title: "PVU without jargon",
+          description: "Voice-of-Customer research shapes copy blocks that echo how your clients speak."
         },
         {
-          title: "Celebrate the win",
-          description: "Dashboards, rituals, and enablement make success visible and repeatable."
+          title: "CTAs for every intent",
+          description: "Low-friction and high-intent CTAs keep explorers and decision makers moving."
         }
       ],
       timeline: [
         {
-          label: "Listen",
-          copy: "We capture goals, stakes, and the human stories behind your systems."
+          label: "Map the win",
+          copy: "We document the stakes, desired success metrics, and the hero’s transformation."
         },
         {
-          label: "Plan",
-          copy: "We co-create a clear roadmap, rituals, and the stack to deliver it."
+          label: "Design the PVU",
+          copy: "StoryBrand structure defines the H1/H2, supporting proof, and CTA ladder."
         },
         {
-          label: "Momentum",
-          copy: "Incremental launches prove value early and keep everyone confident."
+          label: "Instrument",
+          copy: "WebGL hero, analytics, and experiments keep the above-the-fold section alive."
         }
       ],
-      cardLabel: "Guidance dashboard",
-      cardStatus: "Live support",
+      cardLabel: "PVU control room",
+      cardStatus: "StoryBrand live",
       cardNote:
-        "Every milestone is documented, costed, and visible so you never guess how the project is performing.",
+        "Every pixel, copy block, and CTA is tied to a ritual so you always know how the landing converts.",
       pvu: {
         label: "StoryBrand PVU",
         steps: [
-          { title: "Hero", description: "Your team & customers drive the story." },
-          { title: "Guide", description: "ZIMUT translates AI into confident decisions." },
-          { title: "Plan", description: "Three-step roadmap with clear rituals." },
-          { title: "Success", description: "Automation, adoption, and calm growth." }
+          { title: "Hero", description: "Your buyer + their desired win." },
+          { title: "Guide", description: "ZIMUT proves empathy and authority." },
+          { title: "Plan", description: "3 clear actions, zero jargon." },
+          { title: "Success", description: "Tangible outcomes + risk removed." }
         ]
       }
     },
@@ -185,28 +196,28 @@ export const translations: Record<Language, TranslationContent> = {
         "Meanwhile, competitors already use automation to respond faster. Every month of inaction keeps money frozen in inefficiency and erodes morale."
     },
     solution: {
-      badge: "OUR ROLE AS YOUR GUIDE",
-      title: "Live solutions showcased like a New Relic board.",
+      badge: "GUIDE · PLAN · PROOF",
+      title: "It’s time for a new approach.",
       subtitle:
-        "We blend service design, AI, and observability so you always see how the story is progressing across teams.",
-      promise: "Your PVU: Hero (you) + Guide (ZIMUT) + Plan (the plays) + Success (measured momentum).",
-      note: "Every play combines discovery, build, enablement, and care—no more black-box projects.",
+        "Section 3 positions your product as the obvious solution. We pair empathy (we get the pain) with authority (we’ve solved it before) so prospects instantly trust the guide.",
+      promise: "Hero (client) + Guide (ZIMUT) + Plan (3 clear steps) + Success (risk removed).",
+      note: "We script both the emotional copy and the functional proof, then show it inside live showcases so buyers can imagine themselves succeeding.",
       pillars: [
         {
-          title: "01 · Story mining",
-          description: "We document stakes, actors, and constraints before proposing tooling."
+          title: "01 · Empathy first",
+          description: "We mirror the hero’s words before presenting the product so they feel understood."
         },
         {
-          title: "02 · Experience architecture",
-          description: "Blueprints connect processes, data, and AI so everyone sees the same plan."
+          title: "02 · Authority without ego",
+          description: "Stats, rituals, and recognizable logos validate why we’re the trusted guide."
         },
         {
-          title: "03 · Build & automate",
-          description: "Engineers, designers, and AI specialists co-create the platform or copilot."
+          title: "03 · Frictionless plan",
+          description: "Three micro-steps show exactly how to engage without overwhelming the reader."
         },
         {
-          title: "04 · Care & instrumentation",
-          description: "We stay for monitoring, rituals, and optimisation so value compounds."
+          title: "04 · Success storyboard",
+          description: "Mini case studies highlight the transformation after working with us."
         }
       ],
       showcases: [
@@ -270,39 +281,44 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     services: {
-      title: "What we build together.",
+      title: "The SaaS landing blueprint in 7 steps.",
       subtitle:
-        "From bespoke platforms to unified AI copilots, everything is designed to remove friction, scale securely, and delight the people who use it.",
+        "Each section answers a StoryBrand question and is wired to a measurable ritual so you always know what to write, design, and test.",
       list: [
         {
-          title: "Strategic product definition",
-          desc: "Discovery, service design, and technical roadmaps that align leadership and squads.",
-          tags: ["Workshops", "Architecture", "Success metrics"]
+          title: "1 · Above the fold",
+          desc: "Outcome-first H1/H2, PVU, and dual CTAs with cinematic WebGL to hook attention fast.",
+          tags: ["PVU", "Hero", "CTAs"]
         },
         {
-          title: "Web, mobile & platform builds",
-          desc: "Full-stack development of portals, platforms, and mobile experiences built for uptime and clarity.",
-          tags: ["Full-stack", "Design systems", "QA automation"]
+          title: "2 · Problem + agitation",
+          desc: "Voice-of-Customer snippets validate pains and stir the emotional and business cost of inaction.",
+          tags: ["VoC", "Empathy", "PAS"]
         },
         {
-          title: "AI + automation programs",
-          desc: "Unified AI agents, copilots, and workflow automation that remove repetitive tasks and connect data.",
-          tags: ["LLM strategy", "RAG", "Process automation"]
+          title: "3 · Solution + guide",
+          desc: "We introduce your product as the path out while ZIMUT shows empathy and authority as the guide.",
+          tags: ["Guide", "Authority", "StoryBrand"]
         },
         {
-          title: "Modernisation & integrations",
-          desc: "Legacy rebuilds, API ecosystems, and cloud migrations with robust documentation and observability.",
-          tags: ["Cloud", "APIs", "Observability"]
+          title: "4 · Plan in 3 steps",
+          desc: "A frictionless “How it works” roadmap that removes fear and clarifies the next action.",
+          tags: ["Plan", "Rituals", "Clarity"]
         },
         {
-          title: "Data visibility & decisioning",
-          desc: "Dashboards, alerting, and insight layers that keep teams informed and proactive.",
-          tags: ["Analytics", "BI", "Ops enablement"]
+          title: "5 · Proof",
+          desc: "Logos, testimonials, stats, and mini stories that build massive credibility.",
+          tags: ["Logos", "Testimonials", "Stats"]
         },
         {
-          title: "Care & optimisation",
-          desc: "SLA-backed maintenance, performance tuning, and ongoing enablement for your teams.",
-          tags: ["SLA", "Runbooks", "Training"]
+          title: "6 · Stakes",
+          desc: "We remind them what’s at risk if nothing changes and reinforce the CTA.",
+          tags: ["Urgency", "Stakes", "CTA"]
+        },
+        {
+          title: "7 · Conversion & care",
+          desc: "Forms, automations, and clean handoffs that convert and nurture every lead.",
+          tags: ["Form", "Automation", "Follow-up"]
         }
       ]
     },
@@ -356,6 +372,31 @@ export const translations: Record<Language, TranslationContent> = {
         { value: "24/7", label: "Visibility across delivery and support" }
       ]
     },
+    stakes: {
+      badge: "WHAT’S AT STAKE",
+      title: "What happens if you do nothing?",
+      subtitle:
+        "Section 6 revisits the failure. We remind the hero of the cost of staying with broken funnels so urgency feels real, not pushy.",
+      consequences: [
+        {
+          label: "Competitors already rewrite their PVU",
+          detail: "They answer the 5-second question faster, so your ads keep funding someone else’s funnel."
+        },
+        {
+          label: "Manual work keeps scaling",
+          detail: "Without automation and clear CTAs, leads leak out of spreadsheets instead of converting."
+        },
+        {
+          label: "Leadership loses patience",
+          detail: "Every week without a plan erodes confidence and budgets for your team."
+        }
+      ],
+      finalReminder: "Clarity today beats damage control tomorrow. The blueprint keeps you in the hero seat.",
+      ctaLabel: "CTA FINAL",
+      ctaTitle: "Ready to script your 7-step landing?",
+      ctaSubtitle: "We’ll audit your current page and return with the StoryBrand PVU, plan, and motion ideas.",
+      ctaButton: "Book the clarity call"
+    },
     contact: {
       title: "Ready for clarity?",
       subtitle:
@@ -405,51 +446,51 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     hero: {
-      badge: "SOFTWARE GUIADO · PVU STORYBRAND",
-      title: "Vos sos el héroe. Nosotros guiamos la IA para crecer sin caos.",
+      badge: "BLUEPRINT STORYBRAND · PVU",
+      title: "Liderá con el éxito. Diseñamos la PVU que convence en 5 segundos.",
       description:
-        "Los líderes de pymes necesitan un guía, un plan y victorias medibles. ZIMUT escucha tu historia, mapea los riesgos y construye sistemas que devuelven el foco al cliente.",
+        "Tu landing SaaS tiene que responder “¿Qué es esto y por qué debería importarme?” de inmediato. Orquestamos el H1/H2 enfocado en el resultado, la PVU, los CTAs dobles y la animación WebGL para que el visitante sienta el desenlace exitoso.",
       primaryCta: "Agendá la sesión de claridad",
-      secondaryCta: "Mirar el playbook →",
+      secondaryCta: "Ver el blueprint de 7 pasos →",
       highlights: [
         {
-          title: "Guía con empatía",
-          description: "Escuchamos profundo y traducimos la tecnología para alinear dirección y equipos."
+          title: "Titular orientado al éxito",
+          description: "H1 + H2 conectan el resultado final con la audiencia correcta en lenguaje humano."
         },
         {
-          title: "Plan visual",
-          description: "Blueprints StoryBrand muestran qué pasa ahora, después y más adelante."
+          title: "PVU sin jerga",
+          description: "La investigación VoC define cada bloque de texto para reflejar cómo hablan tus clientes."
         },
         {
-          title: "Celebrá el resultado",
-          description: "Dashboards, rituales y enablement hacen visible cada victoria."
+          title: "CTAs para toda intención",
+          description: "Una CTA de baja fricción y otra de alta intención mantienen a todos avanzando."
         }
       ],
       timeline: [
         {
-          label: "Escuchar",
-          copy: "Capturamos objetivos, riesgos y las historias humanas detrás de tus sistemas."
+          label: "Mapear el éxito",
+          copy: "Documentamos las métricas deseadas, los riesgos y la transformación del héroe."
         },
         {
-          label: "Planear",
-          copy: "Co-creamos un roadmap claro, rituales y el stack ideal para ejecutarlo."
+          label: "Diseñar la PVU",
+          copy: "La estructura StoryBrand define H1/H2, prueba de apoyo y escalera de CTAs."
         },
         {
-          label: "Impulso",
-          copy: "Lanzamientos incrementales prueban valor temprano y sostienen la confianza."
+          label: "Instrumentar",
+          copy: "El WebGL hero, analítica y experimentos mantienen viva la sección Above the Fold."
         }
       ],
-      cardLabel: "Panel de guía",
-      cardStatus: "Soporte activo",
+      cardLabel: "Control de PVU",
+      cardStatus: "StoryBrand en vivo",
       cardNote:
-        "Cada hito queda documentado, presupuestado y visible para que nunca vuelvas a adivinar cómo avanza el proyecto.",
+        "Cada pixel, copy y CTA está ligado a un ritual para que siempre sepas cómo convierte la landing.",
       pvu: {
         label: "PVU StoryBrand",
         steps: [
-          { title: "Héroe", description: "Tu equipo y tus clientes al centro." },
-          { title: "Guía", description: "ZIMUT traduce la IA en decisiones claras." },
-          { title: "Plan", description: "Ruta en tres actos con rituales visibles." },
-          { title: "Éxito", description: "Automatización, adopción y calma." }
+          { title: "Héroe", description: "Quién compra + el resultado que busca." },
+          { title: "Guía", description: "ZIMUT demuestra empatía y autoridad." },
+          { title: "Plan", description: "3 acciones claras, sin jerga." },
+          { title: "Éxito", description: "Resultados tangibles + riesgo eliminado." }
         ]
       }
     },
@@ -476,28 +517,28 @@ export const translations: Record<Language, TranslationContent> = {
         "Mientras tanto, tu competencia ya automatiza y responde más rápido. Cada mes sin acción congela presupuesto en ineficiencia y desgasta a las personas."
     },
     solution: {
-      badge: "NUESTRO ROL COMO GUÍA",
-      title: "Soluciones vivas al estilo de un tablero New Relic.",
+      badge: "GUÍA · PLAN · PRUEBA",
+      title: "Es hora de un nuevo enfoque.",
       subtitle:
-        "Combinamos service design, IA y observabilidad para que veas el progreso en tiempo real y con calma.",
-      promise: "Tu PVU: Héroe (vos) + Guía (ZIMUT) + Plan (los plays) + Éxito (impulso medible).",
-      note: "Cada play une descubrimiento, construcción, enablement y cuidado. No más proyectos caja negra.",
+        "La Sección 3 presenta tu producto como la solución obvia y a ZIMUT como el guía experto. Mezclamos empatía (entendemos tu dolor) con autoridad (ya lo resolvimos) para que confíen al instante.",
+      promise: "Héroe (cliente) + Guía (ZIMUT) + Plan (3 pasos) + Éxito (riesgo eliminado).",
+      note: "Escribimos el copy emocional y la prueba funcional, y lo mostramos en showcases vivos para que imaginen su propia transformación.",
       pillars: [
         {
-          title: "01 · Minería de historia",
-          description: "Documentamos riesgos, actores y límites antes de proponer herramientas."
+          title: "01 · Empatía primero",
+          description: "Reflejamos las palabras del héroe antes de presentar el producto."
         },
         {
-          title: "02 · Arquitectura de experiencia",
-          description: "Blueprints conectan procesos, datos e IA para que todos vean el mismo plan."
+          title: "02 · Autoridad sin ego",
+          description: "Métricas, rituales y logos demuestran por qué somos el guía confiable."
         },
         {
-          title: "03 · Construir y automatizar",
-          description: "Ingeniería, diseño y especialistas en IA co-crean la plataforma o el copilot."
+          title: "03 · Plan sin fricción",
+          description: "Tres micro pasos muestran cómo avanzar sin abrumar."
         },
         {
-          title: "04 · Cuidado e instrumentación",
-          description: "Nos quedamos para monitorear, iterar y sostener el valor en el tiempo."
+          title: "04 · Storyboard del éxito",
+          description: "Mini casos describen qué pasa después de trabajar juntos."
         }
       ],
       showcases: [
@@ -561,39 +602,44 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     services: {
-      title: "Lo que construimos juntos.",
+      title: "El blueprint SaaS en 7 pasos.",
       subtitle:
-        "Desde plataformas a medida hasta copilotos de IA unificados, todo está pensado para quitar fricción, escalar con seguridad y enamorar a quienes lo usan.",
+        "Cada sección responde una pregunta StoryBrand y se conecta con un ritual medible para saber qué escribir, diseñar y testear.",
       list: [
         {
-          title: "Definición estratégica de producto",
-          desc: "Descubrimiento, service design y roadmaps técnicos que alinean dirección y equipos.",
-          tags: ["Workshops", "Arquitectura", "Métricas"]
+          title: "1 · Above the Fold",
+          desc: "H1/H2 orientado al resultado, PVU y CTAs dobles con animación WebGL para captar en 5 segundos.",
+          tags: ["PVU", "Héroe", "CTAs"]
         },
         {
-          title: "Desarrollo web, mobile y plataformas",
-          desc: "Construcción full-stack de portales, plataformas y experiencias móviles listas para operar sin sobresaltos.",
-          tags: ["Full-stack", "Design systems", "QA automation"]
+          title: "2 · Problema + agitación",
+          desc: "Fragmentos de VoC validan los dolores y muestran el costo emocional y de negocio de no resolverlos.",
+          tags: ["VoC", "Empatía", "PAS"]
         },
         {
-          title: "Programas de IA y automatización",
-          desc: "Agentes, copilotos y automatizaciones que eliminan tareas repetitivas y conectan datos.",
-          tags: ["Estrategia LLM", "RAG", "Automatización"]
+          title: "3 · Solución + Guía",
+          desc: "Tu producto aparece como el camino y ZIMUT se posiciona como el guía empático y con autoridad.",
+          tags: ["Guía", "Autoridad", "StoryBrand"]
         },
         {
-          title: "Modernización e integraciones",
-          desc: "Reconstrucción de legacy, ecosistemas API y migraciones cloud con documentación y observabilidad.",
-          tags: ["Cloud", "APIs", "Observabilidad"]
+          title: "4 · Plan en 3 pasos",
+          desc: "Un “Cómo funciona” simple que reduce el miedo a la complejidad y muestra acciones concretas.",
+          tags: ["Plan", "Rituales", "Claridad"]
         },
         {
-          title: "Visibilidad y decisión",
-          desc: "Dashboards, alertas y capas de insights para mantener equipos informados y proactivos.",
-          tags: ["Analytics", "BI", "Ops enablement"]
+          title: "5 · Prueba social",
+          desc: "Logos, testimonios, métricas y mini historias que aportan credibilidad instantánea.",
+          tags: ["Logos", "Testimonios", "Stats"]
         },
         {
-          title: "Cuidado y optimización",
-          desc: "Mantenimiento con SLA, tuning de performance y enablement continuo para tus equipos.",
-          tags: ["SLA", "Runbooks", "Training"]
+          title: "6 · Consecuencias",
+          desc: "Recordamos qué está en juego si no actúan y repetimos el CTA de forma directa.",
+          tags: ["Urgencia", "Stakes", "CTA"]
+        },
+        {
+          title: "7 · Conversión y cuidado",
+          desc: "Formularios, automatizaciones y handoffs claros para convertir y nutrir cada lead.",
+          tags: ["Formulario", "Automatización", "Seguimiento"]
         }
       ]
     },
@@ -646,6 +692,31 @@ export const translations: Record<Language, TranslationContent> = {
         { value: "40+", label: "Productos digitales guiados de punta a punta" },
         { value: "24/7", label: "Visibilidad total sobre delivery y soporte" }
       ]
+    },
+    stakes: {
+      badge: "¿QUÉ ESTÁ EN JUEGO?",
+      title: "¿Qué pasa si no hacés nada?",
+      subtitle:
+        "La Sección 6 vuelve al fracaso. Recordamos el costo real de seguir con funnels rotos para generar urgencia sin manipular.",
+      consequences: [
+        {
+          label: "La competencia ya reescribe su PVU",
+          detail: "Responden la pregunta de los 5 segundos más rápido y tus anuncios financian su funnel."
+        },
+        {
+          label: "El trabajo manual se multiplica",
+          detail: "Sin automatización ni CTAs claros, los leads se pierden en planillas en lugar de cerrar."
+        },
+        {
+          label: "Dirección pierde paciencia",
+          detail: "Cada semana sin plan erosiona la confianza y el presupuesto destinado a tu equipo."
+        }
+      ],
+      finalReminder: "Elegir claridad hoy es más barato que apagar incendios mañana.",
+      ctaLabel: "CTA FINAL",
+      ctaTitle: "¿Te guiamos con el blueprint de 7 pasos?",
+      ctaSubtitle: "Auditamos tu landing actual y volvemos con PVU, plan y propuestas de motion.",
+      ctaButton: "Agendar llamada"
     },
     contact: {
       title: "¿Listo para la claridad?",

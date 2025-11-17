@@ -5,6 +5,7 @@ import { Solution } from "@/components/Solution";
 import { Services } from "@/components/Services";
 import { How } from "@/components/How";
 import { Proof } from "@/components/Proof";
+import { Stakes } from "@/components/Stakes";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Page() {
         <Services />
         <How />
         <Proof />
+        <Stakes />
         <Contact />
       </main>
       <Footer />
