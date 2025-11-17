@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { useLanguage } from "@/components/LanguageProvider";
@@ -23,15 +24,35 @@ export function Navbar() {
     >
       <div className="section-wrapper py-4">
         <div className="flex items-center gap-6 lg:gap-10">
-          <a href="#hero" className="flex items-center gap-3 text-zimut-gray-0 transition-colors hover:text-zimut-green-300">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-zimut-gray-700 bg-zimut-gray-800 shadow-inset">
-              <span className="font-semibold text-zimut-green-400">Z</span>
+          <a
+            href="#hero"
+            className="group flex items-center gap-3 text-zimut-gray-0 transition-colors hover:text-zimut-green-300"
+          >
+            <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-zimut-gray-700 bg-zimut-gray-900 shadow-inset">
+              <Image
+                src="/brand/zimut-mark.svg"
+                alt="ZIMUT mark"
+                fill
+                sizes="44px"
+                className="object-contain"
+                priority
+              />
             </div>
-            <div className="leading-tight">
-              <p className="font-semibold tracking-[0.32em] text-xs text-zimut-gray-200 sm:text-sm">
+            <div className="hidden flex-col leading-tight sm:flex">
+              <Image
+                src="/brand/zimut-wordmark.svg"
+                alt="ZIMUT wordmark"
+                width={150}
+                height={40}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+                priority
+              />
+              <p className="mt-1 text-[11px] text-zimut-gray-400">{content.nav.brandDescription}</p>
+            </div>
+            <div className="sm:hidden">
+              <p className="font-semibold tracking-[0.32em] text-xs text-zimut-gray-200">
                 {content.nav.brandTagline}
               </p>
-              <p className="hidden text-xs text-zimut-gray-400 sm:block sm:text-[13px]">{content.nav.brandDescription}</p>
             </div>
           </a>
 

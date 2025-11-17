@@ -70,6 +70,31 @@ export function Hero() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="card-glass space-y-4 p-6"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="eyebrow text-zimut-green-200">{hero.pvu.label}</p>
+              <span className="rounded-full border border-zimut-green-600/40 bg-zimut-green-900/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-zimut-green-200">
+                Guide · Plan · Win
+              </span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {hero.pvu.steps.map((step) => (
+                <div
+                  key={step.title}
+                  className="rounded-xl border border-zimut-gray-700/70 bg-zimut-gray-900/60 p-3"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zimut-green-200">{step.title}</p>
+                  <p className="mt-1 text-sm text-zimut-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
