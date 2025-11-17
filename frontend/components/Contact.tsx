@@ -78,6 +78,17 @@ export function Contact() {
               </span>
             ))}
           </div>
+          <div className="rounded-2xl border border-zimut-gray-700 bg-zimut-gray-800/60 p-4">
+            <p className="text-sm font-semibold text-zimut-gray-0">{contact.stakesTitle}</p>
+            <ul className="mt-3 space-y-2 text-sm text-zimut-gray-300">
+              {contact.stakes.map((stake) => (
+                <li key={stake} className="flex gap-3">
+                  <span aria-hidden className="mt-1 h-1.5 w-1.5 rounded-full bg-zimut-green-400" />
+                  <span>{stake}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
 
         <motion.form
@@ -139,13 +150,16 @@ export function Contact() {
             </p>
           )}
 
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="cta-primary flex w-full justify-center text-sm disabled:opacity-60"
-          >
-            {isLoading ? contact.sending : contact.submit}
-          </button>
+          <div className="space-y-3">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="cta-primary flex w-full justify-center text-sm disabled:opacity-60"
+            >
+              {isLoading ? contact.sending : contact.submit}
+            </button>
+            <p className="text-center text-xs text-zimut-gray-400">{contact.finalCta}</p>
+          </div>
         </motion.form>
       </div>
     </section>

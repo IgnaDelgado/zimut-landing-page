@@ -1,11 +1,12 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { Problem } from "@/components/Problem";
+import { Solution } from "@/components/Solution";
 import { Services } from "@/components/Services";
-import { Why } from "@/components/Why";
 import { How } from "@/components/How";
+import { Proof } from "@/components/Proof";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Benefits } from "@/components/Benefits";
 
 export default function Page() {
   return (
@@ -13,10 +14,11 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
+        <Problem />
+        <Solution />
         <Services />
-        <Why />
         <How />
-        <Benefits />
+        <Proof />
         <Contact />
       </main>
       <Footer />
