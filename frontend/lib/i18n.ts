@@ -20,6 +20,7 @@ export type TranslationContent = {
     cardLabel: string;
     cardStatus: string;
     cardNote: string;
+    pvu: { label: string; steps: { title: string; description: string }[] };
   };
   problem: {
     badge: string;
@@ -35,6 +36,17 @@ export type TranslationContent = {
     promise: string;
     note: string;
     pillars: { title: string; description: string }[];
+    showcases: {
+      id: string;
+      label: string;
+      summary: string;
+      hero: string;
+      title: string;
+      description: string;
+      tags: string[];
+      metrics: { value: string; label: string }[];
+      steps: { title: string; desc: string }[];
+    }[];
   };
   services: {
     title: string;
@@ -85,7 +97,7 @@ export const translations: Record<Language, TranslationContent> = {
   en: {
     nav: {
       brandTagline: "ZIMUT",
-      brandDescription: "AI care for clarity-driven growth",
+      brandDescription: "StoryBrand-inspired AI care for calm growth",
       links: [
         { id: "problem", label: "The problem" },
         { id: "solution", label: "Our promise" },
@@ -102,44 +114,53 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     hero: {
-      badge: "AI CARE · SOFTWARE WITHOUT NOISE",
-      title: "Grow faster with software clarity and a guide you can trust.",
+      badge: "GUIDED SOFTWARE · STORYBRAND PVU",
+      title: "You stay the hero. We turn AI chaos into a calm growth story.",
       description:
-        "ZIMUT removes the “biribiri” from technology for SMB leaders. We translate AI into practical systems that optimise operations, modernise platforms, and keep teams confident every time you scale.",
-      primaryCta: "Let’s design your roadmap",
-      secondaryCta: "See how we work →",
+        "SMB leaders deserve a guide, a plan, and tangible wins. ZIMUT listens to your plot, maps the stakes, and builds automations that let your team focus on the customer.",
+      primaryCta: "Book the clarity session",
+      secondaryCta: "Review the playbook →",
       highlights: [
         {
-          title: "Human-first clarity",
-          description: "We listen, map your system, and turn ideas into a shared, stress-free plan."
+          title: "Guide with empathy",
+          description: "We listen deeply and translate tech so leadership and squads stay aligned."
         },
         {
-          title: "AI as leverage",
-          description: "Intelligence is applied intentionally: one platform, one agent, one chain at a time."
+          title: "Visual battle plan",
+          description: "StoryBrand blueprints show exactly what happens now, next, and later."
         },
         {
-          title: "Care that keeps momentum",
-          description: "We stay after launch with monitoring, training, and optimisation rituals."
+          title: "Celebrate the win",
+          description: "Dashboards, rituals, and enablement make success visible and repeatable."
         }
       ],
       timeline: [
         {
-          label: "Orientation",
-          copy: "We uncover goals, constraints, and the human stories behind your system."
+          label: "Listen",
+          copy: "We capture goals, stakes, and the human stories behind your systems."
         },
         {
-          label: "Navigation",
-          copy: "Clear roadmaps, service blueprints, and the right stack to deliver them."
+          label: "Plan",
+          copy: "We co-create a clear roadmap, rituals, and the stack to deliver it."
         },
         {
           label: "Momentum",
-          copy: "Incremental releases that combine robust engineering with measurable value."
+          copy: "Incremental launches prove value early and keep everyone confident."
         }
       ],
       cardLabel: "Guidance dashboard",
       cardStatus: "Live support",
       cardNote:
-        "Every milestone is documented, costed, and visible so you never guess how the project is performing."
+        "Every milestone is documented, costed, and visible so you never guess how the project is performing.",
+      pvu: {
+        label: "StoryBrand PVU",
+        steps: [
+          { title: "Hero", description: "Your team & customers drive the story." },
+          { title: "Guide", description: "ZIMUT translates AI into confident decisions." },
+          { title: "Plan", description: "Three-step roadmap with clear rituals." },
+          { title: "Success", description: "Automation, adoption, and calm growth." }
+        ]
+      }
     },
     problem: {
       badge: "WE KNOW THE STRUGGLE",
@@ -165,27 +186,86 @@ export const translations: Record<Language, TranslationContent> = {
     },
     solution: {
       badge: "OUR ROLE AS YOUR GUIDE",
-      title: "It’s time for software that feels like care.",
+      title: "Live solutions showcased like a New Relic board.",
       subtitle:
-        "ZIMUT partners with your team to co-create robust systems, mixing human insight with precise technology so your business can grow calmly.",
-      promise: "We turn complex ideas into dependable products that optimise today and open room for tomorrow.",
-      note: "Clarity, quality, security, scalability, and empathy are non-negotiables in every engagement.",
+        "We blend service design, AI, and observability so you always see how the story is progressing across teams.",
+      promise: "Your PVU: Hero (you) + Guide (ZIMUT) + Plan (the plays) + Success (measured momentum).",
+      note: "Every play combines discovery, build, enablement, and care—no more black-box projects.",
       pillars: [
         {
-          title: "01 · Deep discovery",
-          description: "We study your processes, people, and data flows before suggesting a single tool."
+          title: "01 · Story mining",
+          description: "We document stakes, actors, and constraints before proposing tooling."
         },
         {
-          title: "02 · Tailored engineering",
-          description: "Custom platforms, automations, and AI agents shaped to your context—not generic templates."
+          title: "02 · Experience architecture",
+          description: "Blueprints connect processes, data, and AI so everyone sees the same plan."
         },
         {
-          title: "03 · Responsible AI",
-          description: "We validate the impact of each model or automation and keep humans in the loop."
+          title: "03 · Build & automate",
+          description: "Engineers, designers, and AI specialists co-create the platform or copilot."
         },
         {
-          title: "04 · Continuous care",
-          description: "Monitoring, enablement, and iteration so the product keeps compounding value."
+          title: "04 · Care & instrumentation",
+          description: "We stay for monitoring, rituals, and optimisation so value compounds."
+        }
+      ],
+      showcases: [
+        {
+          id: "ops",
+          label: "Ops cockpit",
+          summary: "Connect ERP, sensors, and squads with automated handoffs.",
+          hero: "Operations lead",
+          title: "Operations gain a living command center.",
+          description:
+            "We integrate ERPs, shop-floor sensors, and support tools so every team works from a single source of truth.",
+          tags: ["Integrations", "Automation", "Observability"],
+          metrics: [
+            { value: "-37%", label: "Manual escalations" },
+            { value: "12 w", label: "From mapping to first release" }
+          ],
+          steps: [
+            { title: "Map the flow", desc: "Shadow the process, surface bottlenecks, and define the stakes." },
+            { title: "Instrument & automate", desc: "APIs, bots, and alerts connect ERP, sensors, and squads." },
+            { title: "Coach & evolve", desc: "Ops rituals and enablement keep the command center alive." }
+          ]
+        },
+        {
+          id: "cx",
+          label: "Customer experience",
+          summary: "Unify onboarding, portals, and proactive messaging.",
+          hero: "Product lead",
+          title: "Customers enjoy one guided journey.",
+          description:
+            "We modernise portals, mobile apps, and communications so people self-serve faster and feel supported.",
+          tags: ["Experience", "Web & mobile", "Data"],
+          metrics: [
+            { value: "+48%", label: "Self-service adoption" },
+            { value: "NPS +12", label: "Customer sentiment lift" }
+          ],
+          steps: [
+            { title: "Reframe the journey", desc: "We storyboard pains, emotions, and conversion gaps." },
+            { title: "Design & build", desc: "Design systems + full-stack squads deliver the unified experience." },
+            { title: "Measure & iterate", desc: "Analytics, interviews, and experiments keep the journey sharp." }
+          ]
+        },
+        {
+          id: "copilot",
+          label: "Internal copilot",
+          summary: "Deploy agents that support sales, service, and ops.",
+          hero: "Enablement lead",
+          title: "Teams work with AI sidekicks they trust.",
+          description:
+            "We craft RAG pipelines, governance, and training so copilots answer with context and stay compliant.",
+          tags: ["AI", "Agents", "Training"],
+          metrics: [
+            { value: "-65%", label: "Manual tickets" },
+            { value: "6 w", label: "Copilot MVP launch" }
+          ],
+          steps: [
+            { title: "Identify leverage", desc: "Workshops expose high-volume questions and tasks." },
+            { title: "Build responsibly", desc: "RAG, evals, and guardrails keep humans in the loop." },
+            { title: "Enable & govern", desc: "Training, playbooks, and monitoring sustain adoption." }
+          ]
         }
       ]
     },
@@ -308,7 +388,7 @@ export const translations: Record<Language, TranslationContent> = {
   es: {
     nav: {
       brandTagline: "ZIMUT",
-      brandDescription: "IA que cuida tu crecimiento",
+      brandDescription: "IA y StoryBrand para crecer con calma",
       links: [
         { id: "problem", label: "El problema" },
         { id: "solution", label: "Nuestra promesa" },
@@ -325,44 +405,53 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     hero: {
-      badge: "IA QUE CUIDA · SOFTWARE SIN BIRIBIRI",
-      title: "Crecé con software claro y un guía que se arremanga.",
+      badge: "SOFTWARE GUIADO · PVU STORYBRAND",
+      title: "Vos sos el héroe. Nosotros guiamos la IA para crecer sin caos.",
       description:
-        "ZIMUT le quita el “biribiri” a la tecnología para líderes de pymes. Traducimos la IA en sistemas concretos que optimizan operaciones, modernizan plataformas y mantienen a los equipos seguros cada vez que escalás.",
-      primaryCta: "Diseñemos tu hoja de ruta",
-      secondaryCta: "Conocé cómo trabajamos →",
+        "Los líderes de pymes necesitan un guía, un plan y victorias medibles. ZIMUT escucha tu historia, mapea los riesgos y construye sistemas que devuelven el foco al cliente.",
+      primaryCta: "Agendá la sesión de claridad",
+      secondaryCta: "Mirar el playbook →",
       highlights: [
         {
-          title: "Claridad humana",
-          description: "Escuchamos, mapeamos tu sistema y convertimos ideas en un plan compartido y sin estrés."
+          title: "Guía con empatía",
+          description: "Escuchamos profundo y traducimos la tecnología para alinear dirección y equipos."
         },
         {
-          title: "IA como palanca",
-          description: "Aplicamos inteligencia con intención: un agente, una cadena, una mejora a la vez."
+          title: "Plan visual",
+          description: "Blueprints StoryBrand muestran qué pasa ahora, después y más adelante."
         },
         {
-          title: "Cuidado constante",
-          description: "Seguimos después del lanzamiento con monitoreo, training y rituales de optimización."
+          title: "Celebrá el resultado",
+          description: "Dashboards, rituales y enablement hacen visible cada victoria."
         }
       ],
       timeline: [
         {
-          label: "Orientación",
-          copy: "Detectamos objetivos, límites y las historias humanas detrás de tu sistema."
+          label: "Escuchar",
+          copy: "Capturamos objetivos, riesgos y las historias humanas detrás de tus sistemas."
         },
         {
-          label: "Navegación",
-          copy: "Definimos roadmaps claros, blueprints de servicio y el stack justo para ejecutarlos."
+          label: "Planear",
+          copy: "Co-creamos un roadmap claro, rituales y el stack ideal para ejecutarlo."
         },
         {
           label: "Impulso",
-          copy: "Entregas incrementales que combinan ingeniería sólida con valor medible."
+          copy: "Lanzamientos incrementales prueban valor temprano y sostienen la confianza."
         }
       ],
       cardLabel: "Panel de guía",
       cardStatus: "Soporte activo",
       cardNote:
-        "Cada hito queda documentado, presupuestado y visible para que nunca vuelvas a adivinar cómo avanza el proyecto."
+        "Cada hito queda documentado, presupuestado y visible para que nunca vuelvas a adivinar cómo avanza el proyecto.",
+      pvu: {
+        label: "PVU StoryBrand",
+        steps: [
+          { title: "Héroe", description: "Tu equipo y tus clientes al centro." },
+          { title: "Guía", description: "ZIMUT traduce la IA en decisiones claras." },
+          { title: "Plan", description: "Ruta en tres actos con rituales visibles." },
+          { title: "Éxito", description: "Automatización, adopción y calma." }
+        ]
+      }
     },
     problem: {
       badge: "TE ENTENDEMOS",
@@ -388,27 +477,86 @@ export const translations: Record<Language, TranslationContent> = {
     },
     solution: {
       badge: "NUESTRO ROL COMO GUÍA",
-      title: "Es momento de un software que se sienta como cuidado.",
+      title: "Soluciones vivas al estilo de un tablero New Relic.",
       subtitle:
-        "ZIMUT se asocia con tu equipo para co-crear sistemas robustos mezclando la mirada humana con tecnología precisa, así tu negocio crece con calma.",
-      promise: "Convertimos ideas complejas en productos confiables que optimizan hoy y abren espacio para mañana.",
-      note: "Claridad, calidad, seguridad, escalabilidad y empatía son pilares innegociables en cada proyecto.",
+        "Combinamos service design, IA y observabilidad para que veas el progreso en tiempo real y con calma.",
+      promise: "Tu PVU: Héroe (vos) + Guía (ZIMUT) + Plan (los plays) + Éxito (impulso medible).",
+      note: "Cada play une descubrimiento, construcción, enablement y cuidado. No más proyectos caja negra.",
       pillars: [
         {
-          title: "01 · Descubrimiento profundo",
-          description: "Estudiamos procesos, personas y datos antes de recomendar una sola herramienta."
+          title: "01 · Minería de historia",
+          description: "Documentamos riesgos, actores y límites antes de proponer herramientas."
         },
         {
-          title: "02 · Ingeniería a medida",
-          description: "Plataformas, automatizaciones y agentes de IA diseñados para tu contexto, sin plantillas."
+          title: "02 · Arquitectura de experiencia",
+          description: "Blueprints conectan procesos, datos e IA para que todos vean el mismo plan."
         },
         {
-          title: "03 · IA responsable",
-          description: "Validamos el impacto de cada modelo o automatización y mantenemos a las personas en control."
+          title: "03 · Construir y automatizar",
+          description: "Ingeniería, diseño y especialistas en IA co-crean la plataforma o el copilot."
         },
         {
-          title: "04 · Cuidado continuo",
-          description: "Monitoreo, enablement e iteración para que la solución siga generando valor."
+          title: "04 · Cuidado e instrumentación",
+          description: "Nos quedamos para monitorear, iterar y sostener el valor en el tiempo."
+        }
+      ],
+      showcases: [
+        {
+          id: "ops",
+          label: "Cockpit de operaciones",
+          summary: "Conectamos ERP, sensores y equipos con pases automáticos.",
+          hero: "Líder de Operaciones",
+          title: "Operaciones con un centro de mando vivo.",
+          description:
+            "Integramos ERPs, sensores de planta y herramientas de soporte para que todos trabajen con una sola verdad.",
+          tags: ["Integraciones", "Automatización", "Observabilidad"],
+          metrics: [
+            { value: "-37%", label: "Escalaciones manuales" },
+            { value: "12 sem", label: "Del mapeo al primer release" }
+          ],
+          steps: [
+            { title: "Mapear el flujo", desc: "Acompañamos el proceso, detectamos cuellos y definimos las apuestas." },
+            { title: "Instrumentar y automatizar", desc: "APIs, bots y alertas conectan ERP, sensores y equipos." },
+            { title: "Entrenar y evolucionar", desc: "Rituales de ops y enablement mantienen vivo el cockpit." }
+          ]
+        },
+        {
+          id: "cx",
+          label: "Experiencia de clientes",
+          summary: "Unificamos onboarding, portales y mensajes proactivos.",
+          hero: "Líder de Producto",
+          title: "Clientes con una sola experiencia guiada.",
+          description:
+            "Modernizamos portales, apps y comunicaciones para que las personas se autogestionen rápido y se sientan acompañadas.",
+          tags: ["Experiencia", "Web & mobile", "Datos"],
+          metrics: [
+            { value: "+48%", label: "Adopción self-service" },
+            { value: "NPS +12", label: "Suba de satisfacción" }
+          ],
+          steps: [
+            { title: "Reencuadrar el journey", desc: "Storyboards que exponen dolores, emociones y fugas." },
+            { title: "Diseñar y construir", desc: "Design systems + squads full-stack entregan la experiencia unificada." },
+            { title: "Medir e iterar", desc: "Analytics, entrevistas y experimentos ajustan continuamente." }
+          ]
+        },
+        {
+          id: "copilot",
+          label: "Copilotos internos",
+          summary: "Agentes que acompañan a ventas, servicio y operaciones.",
+          hero: "Líder de Enablement",
+          title: "Equipos con copilotos de IA en los que confían.",
+          description:
+            "Diseñamos pipelines RAG, governance y training para que los copilotos respondan con contexto y cumplan normas.",
+          tags: ["IA", "Agentes", "Training"],
+          metrics: [
+            { value: "-65%", label: "Tickets manuales" },
+            { value: "6 sem", label: "Lanzamiento MVP de copilot" }
+          ],
+          steps: [
+            { title: "Detectar palancas", desc: "Workshops revelan tareas y preguntas de alto volumen." },
+            { title: "Construir con responsabilidad", desc: "RAG, evaluaciones y guardrails mantienen humanos al mando." },
+            { title: "Enablement y gobierno", desc: "Training, playbooks y monitoreo sostienen la adopción." }
+          ]
         }
       ]
     },

@@ -1,0 +1,6 @@
+<svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ZIMUT wordmark">
+  <rect width="360" height="120" rx="28" fill="#0B1222"/>
+  <path d="M32 30H116L80 78H32V30Z" fill="#22D3A8"/>
+  <path d="M60 66H144L108 108H24V66H60Z" fill="#4B5563"/>
+  <text x="170" y="78" fill="#F8FAFC" font-size="56" font-weight="700" font-family="'Inter', 'Segoe UI', sans-serif" letter-spacing="0.14em">ZIMUT</text>
+</svg>
