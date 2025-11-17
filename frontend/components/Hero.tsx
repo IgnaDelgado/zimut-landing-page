@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 import { useLanguage } from "@/components/LanguageProvider";
+import { OrbitalScene } from "@/components/OrbitalScene";
 
 export function Hero() {
   const { hero } = useLanguage().content;
@@ -104,6 +105,9 @@ export function Hero() {
           className="card-glass relative flex h-full flex-col gap-6 overflow-hidden p-6"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-zimut-green-900/40 via-transparent to-zimut-gray-900/40 opacity-80" aria-hidden />
+          <div className="pointer-events-none absolute inset-0 opacity-80">
+            <OrbitalScene />
+          </div>
           <div className="relative flex items-center justify-between">
             <p className="eyebrow">{hero.cardLabel}</p>
             <span className="rounded-full bg-zimut-green-900/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-zimut-green-300">
