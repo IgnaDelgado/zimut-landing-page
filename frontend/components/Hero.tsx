@@ -58,6 +58,31 @@ export function Hero() {
             </a>
           </div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="card-glass border-zimut-green-800/50 bg-gradient-to-br from-zimut-gray-900/80 via-zimut-gray-900/40 to-zimut-green-900/20 p-6"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="eyebrow text-zimut-green-200">{hero.slogan.label}</p>
+              <span className="rounded-full border border-zimut-gray-700/70 bg-zimut-gray-900/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-zimut-gray-200">
+                ZIMUT · STORYBRAND
+              </span>
+            </div>
+            <p className="mt-4 text-2xl font-semibold text-zimut-gray-0">{hero.slogan.tagline}</p>
+            <ul className="mt-4 space-y-2 text-sm text-zimut-gray-300">
+              {hero.slogan.details.map((detail) => (
+                <li key={detail} className="flex gap-2">
+                  <span className="text-zimut-green-300" aria-hidden>
+                    •
+                  </span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           <div className="grid gap-4 sm:grid-cols-3">
             {hero.highlights.map((item, index) => (
               <motion.div
@@ -93,6 +118,7 @@ export function Hero() {
                 </div>
               ))}
             </div>
+            <p className="mt-3 text-sm text-zimut-green-100">{hero.pvu.statement}</p>
           </motion.div>
         </motion.div>
 

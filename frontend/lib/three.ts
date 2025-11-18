@@ -1,12 +1,14 @@
 const THREE_CDN = "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js";
 
+type ThreeGlobal = Record<string, unknown> & { WebGLRenderer?: new (...args: any[]) => any };
+
 declare global {
   interface Window {
-    THREE?: typeof import("three");
+    THREE?: ThreeGlobal;
   }
 }
 
-let loaderPromise: Promise<typeof import("three") | null> | null = null;
+let loaderPromise: Promise<ThreeGlobal | null> | null = null;
 
 export function loadThree() {
   if (typeof window === "undefined") {
@@ -31,6 +33,7 @@ export function loadThree() {
     const script = document.createElement("script");
     script.src = THREE_CDN;
     script.async = true;
+    script.crossOrigin = "anonymous";
     script.dataset.three = "true";
     script.onload = () => {
       if (window.THREE) {

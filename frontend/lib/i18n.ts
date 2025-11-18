@@ -13,6 +13,7 @@ export type TranslationContent = {
     badge: string;
     title: string;
     description: string;
+    slogan: { label: string; tagline: string; details: string[] };
     primaryCta: string;
     secondaryCta: string;
     highlights: { title: string; description: string }[];
@@ -20,7 +21,7 @@ export type TranslationContent = {
     cardLabel: string;
     cardStatus: string;
     cardNote: string;
-    pvu: { label: string; steps: { title: string; description: string }[] };
+    pvu: { label: string; statement: string; steps: { title: string; description: string }[] };
   };
   problem: {
     badge: string;
@@ -132,6 +133,15 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Golden Circle landings that show the win before the scroll.",
       description:
         "Software noise and AI hype freeze decision makers. ZIMUT pairs StoryBrand copy with cinematic WebGL scenes inspired by Linear and Accenture so teams instantly feel the outcome you promise.",
+      slogan: {
+        label: "SLOGAN · PVU",
+        tagline: "From biribiri to clarity: orchestrate Por qué, Cómo y Qué in one view.",
+        details: [
+          "Synthesize the purpose, the plan, and the product inside a single cinematic fold.",
+          "Give every stakeholder a slogan they can repeat and a PVU they can defend.",
+          "Blend Spanish-first storytelling with global-grade, interactive art direction."
+        ]
+      },
       primaryCta: "Book a Golden Circle workshop",
       secondaryCta: "See the blueprint in action →",
       highlights: [
