@@ -18,9 +18,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZIMUT | Software clarity guided by AI care",
+  title: "ZIMUT | Golden Circle software & AI partner",
   description:
-    "ZIMUT designs bespoke software and responsible AI solutions that simplify complexity, accelerate growth, and keep teams confident from discovery to scale."
+    "ZIMUT transforma el Por qué, Cómo y Qué en landings cinematográficas, software robusto y agentes de IA que eliminan la fricción para cualquier industria."
 };
 
 export default function RootLayout({
