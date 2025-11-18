@@ -177,7 +177,6 @@ export const translations: Record<Language, TranslationContent> = {
       cardNote: "Your landing, AI roadmap, and maintenance rituals stay tied to measurable wins.",
       pvu: {
         label: "Why · How · What",
-        statement: "PVU that states the transformation, the friction we remove, and the tech we tailor.",
         steps: [
           { title: "WHY", description: "The final success the hero wants and the cost of inaction." },
           { title: "HOW", description: "StoryBrand plan, governance, and transparency for every milestone." },
@@ -414,15 +413,6 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Mostramos el éxito antes de que el usuario haga scroll.",
       description:
         "En un mundo lleno de biribiri tecnológico, las pymes necesitan un guía que acerque la IA con claridad. Diseñamos copys StoryBrand y animaciones WebGL al nivel de Linear y Accenture para que todos entiendan el valor en 5 segundos.",
-      slogan: {
-        label: "SLOGAN · PVU",
-        tagline: "Menos biribiri, más impacto medible en cada Por qué, Cómo y Qué.",
-        details: [
-          "Resumimos el propósito, el plan y la solución en un mismo pliegue inmersivo.",
-          "Creamos un slogan repetible y una PVU defendible por toda la organización.",
-          "Dirección de arte bilingüe inspirada en Linear y Accenture pero con ADN local."
-        ]
-      },
       primaryCta: "Agendar workshop del Círculo Dorado",
       secondaryCta: "Ver el blueprint en acción →",
       highlights: [
@@ -458,7 +448,6 @@ export const translations: Record<Language, TranslationContent> = {
       cardNote: "Cada decisión queda atada a rituales medibles: landing, IA y mantenimiento trabajando como uno solo.",
       pvu: {
         label: "Por qué · Cómo · Qué",
-        statement: "PVU que declara la transformación, elimina la fricción y describe la tecnología hecha a medida.",
         steps: [
           { title: "POR QUÉ", description: "El éxito deseado y lo que se pierde si nada cambia." },
           { title: "CÓMO", description: "Plan StoryBrand, gobernanza y transparencia en cada hito." },
