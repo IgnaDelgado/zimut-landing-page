@@ -1,6 +1,6 @@
 const THREE_CDN = "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js";
 
-type ThreeGlobal = Record<string, unknown> & { WebGLRenderer: new (...args: any[]) => any };
+type ThreeGlobal = Record<string, any> & { WebGLRenderer: new (...args: any[]) => any };
 
 declare global {
   interface Window {
